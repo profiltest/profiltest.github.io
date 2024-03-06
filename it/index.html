@@ -18,7 +18,7 @@
   <a href="index"><img class="svg-img" src="../elements/pan_associati.svg" alt="Logo"></a>
   
   <div class="lang-switch">
-    <a href="../en/index">EN</a>&nbsp;|&nbsp;
+    <a href="../en/index">EN</a>&nbsp;&nbsp;|&nbsp;
     <a href="#">IT</a>
   </div>
   <div class="DarkModeButton">
@@ -27,10 +27,22 @@
     <div class="darkModeSlider"></div>
     </label>
   </div>
+  <div class="desktop-menu">
+    <a href="#">Chi siamo</a>
+    <a href="#" onclick="toggleMenu('servicesMenu')">Progetti</a>
+    <ul id="servicesMenu" class="dropdown-menu">
+      <li><a href="#">Tutti i progetti</a></li>
+      <li><a href="#">Rigenerazione spazi urbani</a></li>
+      <li><a href="#">Parchi e giardini</a></li>
+      <li><a href="#">Riqualificazione ambientale e paesaggistica</a></li>
+      <li><a href="#">Inserimento ambientale di infrastrutture</a></li>
+      <li><a href="#">Architettura</a></li>
+    </ul>
+    <a href="#">Contatti</a>
+  </div>
 </header>
 
 <!--MENU-->
-<div id="it-content">
 <div id="mySidenav" class="sidenav">
   <a href="#">Chi Siamo</a>
   <div class="sub-links">
@@ -46,7 +58,6 @@
   </div>
   <a href="#">Contatti</a>
 </div>
-</div>
 
 <main>
 <!--#0-->
@@ -54,7 +65,7 @@
     <div class="slider" id="slider1">
       <div class="slides">
         <div class="slide">
-          <img src="../library/home/pan-h2.JPG" alt="Image 1">
+          <img src="../library/home/pan-home-vicenza.jpg" alt="Parco della Pace - Vicenza">
             <div class="overlay">
                 <div class="quote">
                   <p>Parco della Pace - Vicenza</p>
@@ -64,20 +75,40 @@
             </div>
         </div>
         <div class="slide">
-            <img src="../library/home/pan-h3.jpg" alt="Image 2">
+            <img src="../library/home/pan-home-castellaneta-marina.jpg" alt="Castellaneta Marina">
             <div class="overlay">
                 <div class="quote">
-                  <p>Parco della Pace - Vicenza</p>
+                  <p>Castellaneta Marina</p>
                   <div class="small-separator"></div>
                   <a class="color-reversed-link" href="#">Scopri di <span>+</span></a>
                 </div>
             </div>
         </div>
         <div class="slide">
-            <img src="../library/home/pan-h4.jpg" alt="Image 3">
+            <img src="../library/home/pan-home-expo-milano.jpg" alt="Expo 2015 - Milano">
             <div class="overlay">
                 <div class="quote">
-                  <p>Parco della Pace - Vicenza</p>
+                  <p>Expo 2015 - Milano</p>
+                  <div class="small-separator"></div>
+                  <a class="color-reversed-link" href="#">Scopri di <span>+</span></a>
+                </div>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="../library/home/pan-home-gran-paradiso.jpg" alt="Parco Nazionale Gran Paradiso">
+            <div class="overlay">
+                <div class="quote">
+                  <p>Parco Nazionale Gran Paradiso</p>
+                  <div class="small-separator"></div>
+                  <a class="color-reversed-link" href="#">Scopri di <span>+</span></a>
+                </div>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="../library/home/pan-home-pellegrino.jpg" alt="Grand Hotel di San Pellegrino Terme">
+            <div class="overlay">
+                <div class="quote">
+                  <p>Grand Hotel di San Pellegrino Terme</p>
                   <div class="small-separator"></div>
                   <a class="color-reversed-link" href="#">Scopri di <span>+</span></a>
                 </div>
@@ -95,7 +126,7 @@
     <div class="text-elements">
       <div class="big-separator"></div>
       <h1>Chi siamo</h1>
-      <h2>Progetazzione<br>Architettura +<br>Natura</h2>
+      <h2><span>P</span>rogetazzione<br><span>A</span>rchitettura <span>+</span><br><span>N</span>atura</h2>
       <p>PAN associati S.R.L. è una società fondata nel 2001 costituita da un gruppo multidisciplinare di professionisti che operano nei campi della progettazione architettonica e del paesaggio, fino alla pianificazione territoriale.</p>
       <p>La nostra missione è rivitalizzare spazi degradati, convertendoli in aree vivibili e sostenibili che siano di valore per le comunità locali.</p>
       <p>Vediamo in questi spazi un'opportunità per migliorare la vita urbana, creare nuovi habitat ed ecosistemi, favorire la biodiversità, e apportare benefici ecologici attraverso infrastrutture che offrano servizi ecosistemici. Ci impegniamo nella lotta contro i cambiamenti climatici adottando strategie di progettazione ispirate alle soluzioni basate sulla natura (Nature Based Solutions, NBS).</p>
@@ -122,7 +153,7 @@
     <div class="slider" id="slider2">
       <div class="slides">
         <div class="slide">
-          <img src="../library/home/pan-h2.JPG" alt="Image 1">
+          <img src="../library/home/pan-home-rigenerazione.jpg" alt="Rigenerazione spazi urbani">
             <div class="overlay">
                 <div class="quote">
                   <p>Rigenerazione spazi urbani</p>
@@ -132,7 +163,7 @@
             </div>
         </div>
         <div class="slide">
-            <img src="../library/home/pan-h3.jpg" alt="Image 2">
+            <img src="../library/home/pan-home-parchi.jpg" alt="Parchi e giardini">
             <div class="overlay">
                 <div class="quote">
                   <p>Parchi e giardini</p>
@@ -142,7 +173,7 @@
             </div>
         </div>
         <div class="slide">
-            <img src="../library/home/pan-h4.jpg" alt="Image 3">
+            <img src="../library/home/pan-home-riqualificazione.jpg" alt="Riqualificazione ambientale e paesaggistica">
             <div class="overlay">
                 <div class="quote">
                   <p>Riqualificazione ambientale e paesaggistica</p>
@@ -152,7 +183,7 @@
             </div>
         </div>
         <div class="slide">
-            <img src="../library/home/pan-h5.JPG" alt="Image 2">
+            <img src="../library/home/pan-home-progettazione.jpg" alt="Inserimento ambientale di infrastrutture">
             <div class="overlay">
                 <div class="quote">
                   <p>Inserimento ambientale di infrastrutture</p>
@@ -162,7 +193,7 @@
             </div>
         </div>
         <div class="slide">
-            <img src="../library/home/pan-h6.JPG" alt="Image 3">
+            <img src="../library/home/pan-home-architettura.jpg" alt="Architettura">
             <div class="overlay">
                 <div class="quote">
                   <p>Architettura</p>
@@ -177,7 +208,7 @@
 <!--#3-->
   <section class="split" id="responsive-reverse">
     <div>
-      <img src="../library/home/pan-h7.jpg">
+      <img src="../library/home/pan-home-lavoraconnoi.jpg">
     </div>
     <div class="text-elements">
       <div class="big-separator"></div>
@@ -244,6 +275,17 @@ function toggleNav() {
 
 function toggleSubNav() {
   document.getElementById("subNavLinks").classList.toggle("show");
+}
+
+//DESKTOP MENU
+
+function toggleMenu(menuId) {
+  var menu = document.getElementById(menuId);
+  if (menu.style.display === "block") {
+    menu.style.display = "none";
+  } else {
+    menu.style.display = "block";
+  }
 }
 
 //SLIDESHOWS

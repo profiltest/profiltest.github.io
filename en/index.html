@@ -18,7 +18,7 @@
   <a href="index"><img class="svg-img" src="../elements/pan_associati.svg" alt="Logo"></a>
   
   <div class="lang-switch">
-    <a href="#">EN</a>&nbsp;|&nbsp;
+    <a href="#">EN</a>&nbsp;&nbsp;|&nbsp;
     <a href="../it/index">IT</a>
   </div>
   <div class="DarkModeButton">
@@ -27,10 +27,22 @@
     <div class="darkModeSlider"></div>
     </label>
   </div>
+  <div class="desktop-menu">
+    <a href="#">Who we are</a>
+    <a href="#" onclick="toggleMenu('servicesMenu')">Projects</a>
+    <ul id="servicesMenu" class="dropdown-menu">
+      <li><a href="#">All projects</a></li>
+      <li><a href="#">Regeneration of urban spaces</a></li>
+      <li><a href="#">Parks and gardens</a></li>
+      <li><a href="#">Environmental and landscape redevelopment</a></li>
+      <li><a href="#">Environmental insertion of infrastructures</a></li>
+      <li><a href="#">Architecture</a></li>
+    </ul>
+    <a href="#">Contacts</a>
+  </div>
 </header>
 
 <!--MENU-->
-<div id="it-content">
 <div id="mySidenav" class="sidenav">
   <a href="#">Who we are</a>
   <div class="sub-links">
@@ -46,7 +58,6 @@
   </div>
   <a href="#">Contact</a>
 </div>
-</div>
 
 <main>
 <!--#0-->
@@ -54,7 +65,7 @@
     <div class="slider" id="slider1">
       <div class="slides">
         <div class="slide">
-          <img src="../library/home/pan-h2.JPG" alt="Image 1">
+          <img src="../library/home/pan-home-vicenza.jpg" alt="Parco della Pace - Vicenza">
             <div class="overlay">
                 <div class="quote">
                   <p>Parco della Pace - Vicenza</p>
@@ -64,20 +75,40 @@
             </div>
         </div>
         <div class="slide">
-            <img src="../library/home/pan-h3.jpg" alt="Image 2">
+            <img src="../library/home/pan-home-castellaneta-marina.jpg" alt="Castellaneta Marina">
             <div class="overlay">
                 <div class="quote">
-                  <p>Parco della Pace - Vicenza</p>
+                  <p>Castellaneta Marina</p>
                   <div class="small-separator"></div>
                   <a class="color-reversed-link" href="#">Learn more</a>
                 </div>
             </div>
         </div>
         <div class="slide">
-            <img src="../library/home/pan-h4.jpg" alt="Image 3">
+            <img src="../library/home/pan-home-expo-milano.jpg" alt="Expo 2015 - Milano">
             <div class="overlay">
                 <div class="quote">
-                  <p>Parco della Pace - Vicenza</p>
+                  <p>Expo 2015 - Milano</p>
+                  <div class="small-separator"></div>
+                  <a class="color-reversed-link" href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="../library/home/pan-home-gran-paradiso.jpg" alt="Parco Nazionale Gran Paradiso">
+            <div class="overlay">
+                <div class="quote">
+                  <p>Parco Nazionale Gran Paradiso</p>
+                  <div class="small-separator"></div>
+                  <a class="color-reversed-link" href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="../library/home/pan-home-pellegrino.jpg" alt="Grand Hotel di San Pellegrino Terme">
+            <div class="overlay">
+                <div class="quote">
+                  <p>Grand Hotel di San Pellegrino Terme</p>
                   <div class="small-separator"></div>
                   <a class="color-reversed-link" href="#">Learn more</a>
                 </div>
@@ -122,7 +153,7 @@
     <div class="slider" id="slider2">
       <div class="slides">
         <div class="slide">
-          <img src="../library/home/pan-h2.JPG" alt="Image 1">
+          <img src="../library/home/pan-home-rigenerazione.jpg" alt="Regeneration of urban spaces">
             <div class="overlay">
                 <div class="quote">
                   <p>Regeneration of urban spaces</p>
@@ -132,7 +163,7 @@
             </div>
         </div>
         <div class="slide">
-            <img src="../library/home/pan-h3.jpg" alt="Image 2">
+            <img src="../library/home/pan-home-parchi.jpg" alt="Parks and gardens">
             <div class="overlay">
                 <div class="quote">
                   <p>Parks and gardens</p>
@@ -142,17 +173,17 @@
             </div>
         </div>
         <div class="slide">
-            <img src="../library/home/pan-h4.jpg" alt="Image 3">
+            <img src="../library/home/pan-home-riqualificazione.jpg" alt="Environmental and landscape redevelopmenta">
             <div class="overlay">
                 <div class="quote">
-                  <p>Environmental and landscape redevelopmenta</p>
+                  <p>Environmental and landscape redevelopment</p>
                   <div class="small-separator"></div>
                   <a class="color-reversed-link" href="#">Learn more</a>
                 </div>
             </div>
         </div>
         <div class="slide">
-            <img src="../library/home/pan-h5.JPG" alt="Image 2">
+            <img src="../library/home/pan-home-progettazione.jpg" alt="Environmental insertion of infrastructures">
             <div class="overlay">
                 <div class="quote">
                   <p>Environmental insertion of infrastructures</p>
@@ -162,7 +193,7 @@
             </div>
         </div>
         <div class="slide">
-            <img src="../library/home/pan-h6.JPG" alt="Image 3">
+            <img src="../library/home/pan-home-architettura.jpg" alt="Architecture">
             <div class="overlay">
                 <div class="quote">
                   <p>Architecture</p>
@@ -177,7 +208,7 @@
 <!--#3-->
   <section class="split" id="responsive-reverse">
     <div>
-      <img src="../library/home/pan-h7.jpg">
+      <img src="../library/home/pan-home-lavoraconnoi.jpg">
     </div>
     <div class="text-elements">
       <div class="big-separator"></div>
@@ -244,6 +275,17 @@ function toggleNav() {
 
 function toggleSubNav() {
   document.getElementById("subNavLinks").classList.toggle("show");
+}
+
+//DESKTOP MENU
+
+function toggleMenu(menuId) {
+  var menu = document.getElementById(menuId);
+  if (menu.style.display === "block") {
+    menu.style.display = "none";
+  } else {
+    menu.style.display = "block";
+  }
 }
 
 //SLIDESHOWS
