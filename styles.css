@@ -23,13 +23,13 @@ body {
 .header img {
   height: 30px;
   vertical-align: middle; /* Align the image vertically */
-  float: left;
-  margin-left: 30px;
+  float: left;  
 }
 
 .burger {
   float: left; /* Float the burger menu to the right */
   cursor: pointer;
+  margin-right: 30px;
 }
 
 .bar1, .bar2, .bar3 {
@@ -94,6 +94,36 @@ body {
 
 .sub-nav-links.show {
   display: block;
+}
+
+/* desktop menu */
+
+.desktop-menu{
+  float: right;
+  margin-top: 5px;
+}
+
+.desktop-menu a {
+  margin-right: 45px;
+  font-size: 21px;
+  font-weight: 200;
+}
+
+/* Styling for the dropdown menu */
+.dropdown-menu {
+  margin-left: 118px ;
+  height: 100vh;
+  display: none;
+  position: absolute;
+  background-color: #f2f2f2; /* grey */
+  width: 450px;
+  padding: 0px 20px;
+  z-index: 1;
+}
+
+.dropdown-menu li {
+  display: block;
+  padding: 15px 0px;
 }
 
 /* footer */
@@ -293,6 +323,12 @@ main img {
   .sidenav.open {
     width: 50%;
   }
+  section {
+    margin-bottom: 100px;
+  }
+  .burger , .sidenav {
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 1000px) {
@@ -302,6 +338,9 @@ main img {
   }
   .sidenav.open {
     width: 100%;
+  }
+  .desktop-menu{
+    display: none;
   }
 }
 
@@ -323,13 +362,14 @@ main img {
 .lang-switch{
   float: right;
   font-size: 30px;
-  margin-top: -1px;
+  margin-top: -2px;
 }
 
 .lang-switch a {
   font-family: 'Archivo', sans-serif;
-  font-size: 23px;
-  font-weight: 600;
+  padding: 0px;
+  font-size: 20px;
+  font-weight: 400;
   cursor: pointer;
   color: inherit;
   border: none;
@@ -416,4 +456,8 @@ body.dark-mode .sidenav a , body.dark-mode .sub-links a {
 
 body.dark-mode .bar1 , body.dark-mode .bar2 , body.dark-mode .bar3 {
   background-color: #f2f2f2; /* grey */
+}
+
+body.dark-mode .dropdown-menu {
+  background-color: #1B1B1A; /* black */
 }
