@@ -108,7 +108,7 @@ body {
 .desktop-menu a {
   margin-right: 45px;
   font-size: 21px;
-  font-weight: 200;
+  font-weight: 400;
 }
 
 .dropdown-menu {
@@ -157,7 +157,7 @@ footer{
 
 main {
   margin: 0;
-  padding-top: 120px;
+  padding-top: 90px;
 }
 
 section {
@@ -244,7 +244,7 @@ a:hover {
 
 main img {
   width: 100%;
-  height: calc(100vh - 120px);
+  height: calc(100vh - 90px);
   margin: 0px;
   object-fit: cover;
   display: block;
