@@ -13,7 +13,7 @@ body {
 /* header */
 
 .header {
-  padding: 20px 30px; 
+  padding: 14px 30px; 
   position: fixed;
   top: 0;
   left: 0;
@@ -23,7 +23,7 @@ body {
 }
 
 .header img {
-  height: 30px;
+  height: 45px;
   vertical-align: middle; 
   float: left;  
 }
@@ -33,20 +33,20 @@ body {
 .burger {
   float: left; 
   cursor: pointer;
-  margin-right: 30px;
+  margin: 7px 30px 0px 0px;
 }
 
 .bar1, .bar2, .bar3 {
-  width: 35px;
-  height: 3px;
+  width: 30px; 
+  height: 2px; 
   background-color: #1B1B1A; /* black */
-  margin: 6px 0;
+  margin: 7px 0;
   transition: 0.4s;
 }
 
 .change .bar1 {
-  -webkit-transform: rotate(-45deg) translate(-20px, 6px);
-  transform: rotate(-45deg) translate(-5px, 6px);
+  -webkit-transform: rotate(-45deg) translate(-6px, 6px); 
+  transform: rotate(-45deg) translate(-6px, 6px); 
 }
 
 .change .bar2 {
@@ -54,8 +54,8 @@ body {
 }
 
 .change .bar3 {
-  -webkit-transform: rotate(45deg) translate(-8px, -8px);
-  transform: rotate(45deg) translate(-8px, -8px);
+  -webkit-transform: rotate(45deg) translate(-6px, -6px); 
+  transform: rotate(45deg) translate(-6px, -6px); 
 }
 
 .sidenav {
@@ -103,7 +103,7 @@ body {
 
 .desktop-menu{
   float: right;
-  margin-top: 5px;
+  margin-top: 9px;
 }
 
 .desktop-menu a {
@@ -203,7 +203,7 @@ h1 {
 h2 {
   margin: 5px 0px 25px 0px;
   font-size: 45px;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 45px;
 }
 
@@ -388,7 +388,7 @@ main img {
 .lang-switch{
   float: right;
   font-size: 30px;
-  margin-top: -2px;
+  margin-top: 5px;
 }
 
 .lang-switch a {
@@ -406,7 +406,7 @@ main img {
 
 .DarkModeButton{
   float: right;
-  margin: 6.5px 30px 0 0;
+  margin: 11px 30px 0 0;
 }
 
 .darkModeToggle {
