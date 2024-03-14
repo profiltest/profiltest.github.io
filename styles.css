@@ -213,13 +213,11 @@ a.classic-link {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-
   max-width: calc(100% - 60px);
   overflow: hidden;
   margin: 7px 7px 0px 0px;
   display: inline-block; 
-
-  padding: 5px 15px 5px 17px;
+  padding: 5px 15px 5.5px 17px;
   border-radius: 500px;
   border: 1px solid #1B1B1A; /* black */
   color: #1B1B1A; /* black */
