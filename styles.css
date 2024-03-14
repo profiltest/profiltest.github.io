@@ -214,7 +214,7 @@ a.classic-link {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-width: calc(100% - 60px);
+  max-width: calc(100% - 35px);
   overflow: hidden;
   margin: 7px 7px 0px 0px;
   display: inline-block; 
