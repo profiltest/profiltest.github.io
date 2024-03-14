@@ -180,7 +180,7 @@ p{
 /* headings */
 
 h1 {
-  opacity: 0.33;
+  color: #e52213; /* rosso */
   margin: 0px 0px 20px 0px;
   font-size: 14px;
   font-weight: 600;
@@ -463,6 +463,10 @@ body.dark-mode header{
 body.dark-mode footer{
   background-color: #242424; /* black - caffe #2 */
   color: #f2f2f2; /* grey */
+}
+
+body.dark-mode h1 {
+  color: #d57fe1; /* mauve */
 }
 
 body.dark-mode img.svg-img {
