@@ -31,9 +31,9 @@ body {
 /* burger menu */
 
 .burger {
-  float: left; 
+  float: right; 
   cursor: pointer;
-  margin: 7px 30px 0px 0px;
+  margin: 7px 0px 0px 0px;
 }
 
 .bar1, .bar2, .bar3 {
@@ -65,8 +65,9 @@ body {
   position: fixed;
   z-index: 2;
   top: 0px;
-  left: 0;
-  padding-top: 70px;
+  right: 0;
+  text-align: right;
+  padding: 70px 5px 0px 0px;
   overflow-x: hidden;
   transition: 0.2s;
 }
@@ -358,6 +359,9 @@ main img {
   .text-elements {
     padding: 100px 30px;
   }
+  #DMB1 , #LS1 {
+    display: none;
+  }
 }
 
 /* responsive for footer */
@@ -382,13 +386,19 @@ a.hermit-link {max-width: calc(100% - 5px);}
 
 /* language switch */
 
-.lang-switch{
+#LS1{
   float: right;
   font-size: 30px;
   margin-top: 5px;
 }
 
+#LS2{
+  font-size: 30px;
+  margin: 50px 30px 0px 30px;
+}
+
 .lang-switch a {
+  display: inline-block;
   font-family: 'Archivo', sans-serif;
   padding: 0px;
   font-size: 20px;
@@ -401,9 +411,13 @@ a.hermit-link {max-width: calc(100% - 5px);}
 
 /* Dark Mode switch */
 
-.DarkModeButton{
+#DMB1{
   float: right;
   margin: 11px 30px 0 0;
+}
+
+#DMB2{
+  margin: 30px 70px;
 }
 
 .darkModeToggle {
@@ -447,6 +461,12 @@ a.hermit-link {max-width: calc(100% - 5px);}
 
 .darkModeToggle:checked + .darkModeLabel .darkModeSlider:before {
   transform: translateX(20px);
+}
+
+.sidenav p{
+  font-size: 31px;
+  float: right;
+  margin: -58px 30px 0px 0px;
 }
 
 /* Styles for body in dark mode */
