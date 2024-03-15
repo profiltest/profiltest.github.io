@@ -119,14 +119,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <main class="direct-content">
   <section class="split">
     <div class="text-elements">
-      <h1>Contact</h1>
       <h2>An idea?</h2>
       <p>We are thrilled to have the opportunity to connect with you. Here, we believe that every contact is a potential opportunity for collaboration and mutual growth.</p>
       <p>If you are interested in becoming part of our team, exploring collaboration opportunities or simply sharing ideas and feedback, you are in the right place. We are always looking for passionate and motivated talents who share our vision.</p>
       <p>If you are curious to learn more about our work and our design approach, we invite you to visit the <a href="404">studio</a> section. Here you can discover our work philosophy and our team.</p>
     </div>
     <div class="text-elements">
-      <h1>&nbsp;</h1>
       <h2>Write us!</h2>
       <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
         <p>Name:</p>
