@@ -268,7 +268,7 @@ a:hover {
 
 main img {
   width: 100%;
-  height: calc(100vh - 74px);
+  height: calc(100vh - 72px);
   margin: 0px;
   object-fit: cover;
   display: block;
