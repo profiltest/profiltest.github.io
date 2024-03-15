@@ -142,7 +142,7 @@ footer{
   bottom: 0;
   width: calc(100% - 60px);
   padding: 5px 30px;
-  background-color: #e2e2e2; /* caffe */
+  background-color: #dbecd9;; /* green caffe */
 }
 
 .foot{
@@ -230,8 +230,7 @@ a.classic-link {
   display: inline-block; 
   padding: 5px 15px 5.5px 17px;
   border-radius: 500px;
-  border: 1px solid #1B1B1A; /* black */
-  color: #1B1B1A; /* black */
+  background-color: #dbecd9;; /* green-caffe */
 }
 
 a.hermit-link {
@@ -251,7 +250,7 @@ a.color-reversed-link {
   padding: 6px 11px;
   border-radius: 500px;
   border: 1px solid #f2f2f2; /* grey */
-  color: #f2f2f2; /* grey */
+  color: lightgoldenrodyellow; /* grey */
 }
 
 a span{
@@ -511,7 +510,7 @@ a.hermit-link {max-width: calc(100% - 5px);}
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #e2e2e2; /* caffe */
+  background-color: #dbecd9;; /* green caffe */
   transition: 0.4s;
   border-radius: 20px;
 }
@@ -529,7 +528,7 @@ a.hermit-link {max-width: calc(100% - 5px);}
 }
 
 .darkModeToggle:checked + .darkModeLabel .darkModeSlider {
-  background-color: #525252; /* black - caffe #1 */
+  background-color: #50525e; /* purple caffe */
 }
 
 .darkModeToggle:checked + .darkModeLabel .darkModeSlider:before {
@@ -554,7 +553,7 @@ body.dark-mode header {
 }
 
 body.dark-mode footer {
-  background-color: #242424; /* black - caffe #2 */
+  background-color: #50525e; /* purple caffe */
   color: #f2f2f2; /* grey */
 }
 
@@ -567,8 +566,8 @@ body.dark-mode .sidenav {
 }
 
 body.dark-mode .classic-link {
-  color: #f2f2f2; /* grey */
-  border: 1px solid #f2f2f2; /* grey */
+
+  background-color: #50525e; /* purple caffe */
 }
 
 body.dark-mode .sidenav a , body.dark-mode .sub-links a {
