@@ -120,12 +120,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <section class="split">
     <div class="text-elements">
       <h1>Contatti</h1>
-      <h2>Scrivici!</h2>
+      <h2>Un idea?</h2>
       <p>Siamo entusiasti di avere l'opportunità di connetterci con te. Qui, crediamo che ogni contatto sia una potenziale occasione di collaborazione e crescita reciproca.</p>
       <p>Se sei interessato/a a diventare parte della nostra squadra, esplorare le opportunità di collaborazione o semplicemente condividere idee e feedback, sei nel posto giusto. Siamo sempre alla ricerca di talenti appassionati e motivati che condividono la nostra visione.</p>
       <p>Se sei curioso di conoscere meglio il nostro lavoro e il nostro approccio progettuale, ti invitiamo a visitare la sezione <a href="404">studio</a>. Qui potrai scoprire la nostra filosofia di lavoro e il nostro team.</p>
     </div>
     <div class="text-elements">
+      <h1>&nbsp;</h1>
+      <h2>Scrivici!</h2>
       <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
         <p>Nome:</p>
         <input class="fill" type="text" id="name" name="name" placeholder="Maria Rossi" required>
