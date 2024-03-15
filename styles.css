@@ -273,6 +273,10 @@ main img {
   display: block;
 }
 
+.nfs{
+  height: 50vh;
+}
+
 /* slider */
 
 .slider {
