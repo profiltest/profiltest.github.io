@@ -1,3 +1,36 @@
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Récupération des données du formulaire
+    $destinataire = "studio@panassociati.net"; // Adresse e-mail du destinataire
+    $sujet = "Nouveau message depuis le formulaire de contact";
+    $name = $_POST["name"];
+    $email = $_POST["email"];
+    $message = $_POST["message"];
+
+    // Construction du contenu de l'e-mail
+    $contenu = "Nom: $name\n";
+    $contenu .= "Email: $email\n";
+    $contenu .= "Message:\n$message";
+
+    // En-têtes de l'e-mail
+    $entetes = "From: $email" . "\r\n" .
+               "Reply-To: $email" . "\r\n" .
+               "X-Mailer: PHP/" . phpversion();
+
+    // Envoi de l'e-mail
+    if (mail($destinataire, $sujet, $contenu, $entetes)) {
+        echo "Votre message a été envoyé avec succès.";
+    } else {
+        echo "Erreur lors de l'envoi du message. Veuillez réessayer plus tard.";
+    }
+} else {
+    // Redirection si le formulaire n'a pas été soumis
+    header("Location: formulaire_contact.php");
+    exit;
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -29,7 +62,7 @@
   <a href="index"><img class="svg-img" src="../elements/pan_associati.svg" alt="Logo"></a>
   
   <div class="lang-switch" id="LS1">
-    <a href="../en/privacy">EN</a>&nbsp;&nbsp;|&nbsp;
+    <a href="../en/contact">EN</a>&nbsp;&nbsp;|&nbsp;
     <a href="#">IT</a>
   </div>
   <div class="DarkModeButton" id="DMB1">
@@ -71,7 +104,7 @@
   </div>
   <a href="contatti">Contatti</a>
   <div class="lang-switch" id="LS2">
-    <a href="../en/privacy">EN</a>&nbsp;&nbsp;|&nbsp;
+    <a href="../en/contact">EN</a>&nbsp;&nbsp;|&nbsp;
     <a href="#">IT</a>
   </div>
   <div class="DarkModeButton" id="DMB2">
@@ -84,23 +117,43 @@
 </div>
 
 <main class="direct-content">
-  <section class="mono">
+  <section class="split">
     <div class="text-elements">
-      <h1>Privacy and Cookie Policy</h1>
-      <h2>Informativa</h2>
-      <p>Grazie per aver visitato panassociati.net. Rispettiamo la tua privacy e ci impegniamo a proteggere qualsiasi informazione tu possa fornire durante l'utilizzo del nostro sito web.</p>
-      <p>Raccolta e utilizzo delle informazioni:
-      <br>Non raccogliamo alcuna informazione personale dai visitatori del nostro sito web. Puoi navigare anonimamente sul nostro sito senza fornire alcun dettaglio personale.</p>
-      <p>Utilizzo dei cookie:
-      <br>Non utilizziamo cookie o altre tecnologie di tracciamento sul nostro sito web.</p>
-      <p>Link a siti di terze parti:
-      <br>Il nostro sito web potrebbe contenere collegamenti a siti web di terze parti per tua comodità o riferimento. Non siamo responsabili per le politiche sulla privacy o le pratiche di questi siti web.</p>
-      <p>Modifiche a questa informativa sulla privacy:
-      <br>Ci riserviamo il diritto di aggiornare o modificare la nostra informativa sulla privacy in qualsiasi momento. Eventuali modifiche saranno pubblicate su questa pagina.</p>
-      <p>Contattaci:
-      <br>Se hai domande sulla nostra informativa sulla privacy, ti preghiamo di contattarci al seguente indirizzo: <a class="text-link" href="mailto:studio@panassociati.it">studio@panassociati.it</a>.</p>
-      <div class="big-separator"></div>
-      <a href="index" class="classic-link">Ritorna a la home</a>
+      <h1>Contatti</h1>
+      <h2>Scrivici!</h2>
+      <p>Siamo entusiasti di avere l'opportunità di connetterci con te. Qui, crediamo che ogni contatto sia una potenziale occasione di collaborazione e crescita reciproca.</p>
+      <p>Se sei interessato/a a diventare parte della nostra squadra, esplorare le opportunità di collaborazione o semplicemente condividere idee e feedback, sei nel posto giusto. Siamo sempre alla ricerca di talenti appassionati e motivati che condividono la nostra visione.</p>
+      <p>Se sei curioso di conoscere meglio il nostro lavoro e il nostro approccio progettuale, ti invitiamo a visitare la sezione <a href="404">studio</a>. Qui potrai scoprire la nostra filosofia di lavoro e il nostro team.</p>
+    </div>
+    <div class="text-elements">
+      <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+        <p>Nome:</p>
+        <input class="fill" type="text" id="name" name="name" placeholder="Maria Rossi" required>
+  
+        <p>Email:</p>
+        <input class="fill" type="email" id="email" name="email" placeholder="mariarossi@esempio.it" required>
+
+        <p>Messagio:</p>
+        <textarea id="message" name="message" placeholder="Ciao associati!" required></textarea>
+
+        <input class="send" type="submit" value="Submit">
+      </form>
+    </div>
+    
+  </section>
+
+  <section class="split">
+    <div class="text-elements">
+      <h2>Hai qualcosa in +?</h2>
+      <p>In un contesto collaborativo, PA+N Associati ti offre l'opportunità di far parte di un team dinamico, dove la tua crescita personale e professionale è al centro della nostra attenzione. Il nostro studio, focalizzato sull'innovazione e la ricerca, si impegna a trasformare ogni progetto in un'avventura di scoperta. Collaborerai con un gruppo di professionisti appassionati, impegnati nel plasmare il futuro dell'architettura attraverso la progettazione e la gestione dei progetti.</p>
+    </div>
+    <div class="text-elements">
+      <h2>Lavora con noi!</h2>
+      <a href="404" class="classic-link">Architetto Senior</a>
+      <a href="404" class="classic-link">Architetto Junior</a>
+      <a href="404" class="classic-link">Ufficio DL – Computista</a>
+      <a href="404" class="classic-link">Profilo tecnico</a>
+      <a href="404" class="classic-link">Profilo amministrativo</a>
     </div>
   </section>
 </main>
