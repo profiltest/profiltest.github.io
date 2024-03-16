@@ -6,7 +6,7 @@ body {
   font-size: 19px;
   font-weight: 200;
   line-height: 25px;
-  background-color: #f2f2f2; /* grey */
+  background-color: #dfdfdf; /* mid grey */
   color: #1B1B1A; /* black */
 }
 
@@ -142,7 +142,7 @@ footer{
   bottom: 0;
   width: calc(100% - 60px);
   padding: 5px 30px;
-  background-color: #dbecd9;; /* green caffe */
+  background-color: #f2f2f2; /* grey */
 }
 
 .foot{
@@ -150,8 +150,8 @@ footer{
 }
 
 footer img{
-  max-height: 45px;
-  margin: 0px 5px 50px 5px;
+  max-height: 35px;
+  margin: 20px 5px 50px 5px;
 }
 
 /* main */
@@ -167,12 +167,6 @@ main.direct-content {
 
 section {
   width: 100%;
-}
-
-.mono{
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto;
 }
 
 /* divs */
@@ -206,6 +200,10 @@ h2 {
   line-height: 45px;
 }
 
+h3 {
+  font-size: 26px;
+}
+
 /* separators */
 
 .small-separator {height: 10px;}
@@ -231,7 +229,7 @@ a.classic-link {
   display: inline-block; 
   padding: 5px 15px 5.5px 17px;
   border-radius: 500px;
-  background-color: #dbecd9;; /* green-caffe */
+  background-color: #f2f2f2; /* grey */
 }
 
 a.hermit-link {
@@ -274,8 +272,9 @@ main img {
   display: block;
 }
 
-.nfs{
+.newsfeed{
   height: 50vh;
+  object-fit: cover;
 }
 
 /* slider */
@@ -343,6 +342,10 @@ main img {
 
 /* form */
 
+form {
+  margin-bottom: 80px;
+}
+
 input.fill , textarea {
   width: 100%;
   background-color: rgba(0,0,0,0);
@@ -404,8 +407,10 @@ body.dark-mode input.send {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
-  .tiers1{width: 60%; margin: 0px 2.5% 0px 37.5%;}
-  .tiers2{width: 60%; margin: 0px 37.5% 0px 2.5%;}
+  .mono{
+    width: 60%;
+    margin: 0px 2.5% 0px 37.5%;
+  }
   .sidenav.open {
     width: 50%;
   }
@@ -414,6 +419,14 @@ body.dark-mode input.send {
   }
   .burger , .sidenav {
     display: none;
+  }
+  .newsfeed{
+    width: 75%;
+    margin-left: 25%;
+  }
+  #newsfeed{
+    width: calc(77% - 45px);
+    margin-right: calc(25% - 45px);
   }
 }
 
@@ -513,7 +526,7 @@ a.hermit-link {max-width: calc(100% - 5px);}
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #dbecd9;; /* green caffe */
+  background-color: #dfdfdf; /* mid grey */
   transition: 0.4s;
   border-radius: 20px;
 }
