@@ -117,50 +117,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </div>
 
 <main class="direct-content">
-  <section class="split">
-    <div class="text-elements">
-      <h2>An idea?</h2>
-      <p>We are thrilled to have the opportunity to connect with you. Here, we believe that every contact is a potential opportunity for collaboration and mutual growth.</p>
-      <p>If you are interested in becoming part of our team, exploring collaboration opportunities or simply sharing ideas and feedback, you are in the right place. We are always looking for passionate and motivated talents who share our vision.</p>
-      <p>If you are curious to learn more about our work and our design approach, we invite you to visit the <a href="404">studio</a> section. Here you can discover our work philosophy and our team.</p>
-    </div>
-    <div class="text-elements">
-      <h2>Write us!</h2>
-      <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-        <p>Name:</p>
-        <input class="fill" type="text" id="name" name="name" placeholder="Maria Rossi" required>
-  
-        <p>Email:</p>
-        <input class="fill" type="email" id="email" name="email" placeholder="mariarossi@esempio.it" required>
-
-        <p>Message:</p>
-        <textarea id="message" name="message" placeholder="Ciao associati!" required></textarea>
-
-        <input class="send" type="submit" value="Submit">
-      </form>
-    </div>
-    
-  </section>
-
-  <section class="split">
-    <div class="text-elements">
-      <h2>Do you have something extra?</h2>
-      <p>In a collaborative context, PA+N Associati offers you the opportunity to be part of a dynamic team, where your personal and professional growth is at the center of our attention. Our studio, focused on innovation and research, is committed to turning every project into an adventure of discovery. You will collaborate with a group of passionate professionals committed to shaping the future of architecture through design and project management.</p>
-    </div>
-    <div class="text-elements">
-      <h2>Work with us!</h2>
-      <a href="404" class="classic-link">Senior Architect</a>
-      <a href="404" class="classic-link">Junior Architect</a>
-      <a href="404" class="classic-link">DL Office - Accountant</a>
-      <a href="404" class="classic-link">Technical Profile</a>
-      <a href="404" class="classic-link">Administrative profile</a>
-    </div>
-  </section>
 </main>
 
 <footer>
   <div class="big-separator"></div>
-  <h2>Contact</h2>
+  <img class="svg-img" src="../elements/pan_associati_ext.svg">
 
     <div class="footer-bottom">
         <div class="column">

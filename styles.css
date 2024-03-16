@@ -149,6 +149,11 @@ footer{
   font-size: 14px;
 }
 
+footer img{
+  max-height: 45px;
+  margin: 0px 5px 50px 5px;
+}
+
 /* main */
 
 main {
@@ -214,10 +219,6 @@ a {
   font-weight: 600;
   text-decoration: none;
   color: inherit;
-}
-
-main p a{
-  border-bottom: 1px solid;
 }
 
 a.classic-link {
@@ -403,6 +404,8 @@ body.dark-mode input.send {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
+  .tiers1{width: 60%; margin: 0px 2.5% 0px 37.5%;}
+  .tiers2{width: 60%; margin: 0px 37.5% 0px 2.5%;}
   .sidenav.open {
     width: 50%;
   }
