@@ -120,27 +120,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </main>
 
 <footer>
-  <div class="big-separator"></div>
   <img class="svg-img" src="../elements/pan_associati_ext.svg">
+  <div>
+    <p><a class="text-link" href="https://maps.app.goo.gl/4BmQPbvBmLEBtHKx5">Via Don Carlo Porro 6 - 20128 Milano (MI) - Italia</a></p>
+    <p>Tel:&nbsp;<a class="text-link" href="tel:0039022578982">0039 02 257 8982</a>
+    <br>Email:&nbsp;<a class="text-link" href="mailto:studio@panassociati.it">studio@panassociati.it</a>
+    <br>Pec:&nbsp;<a class="text-link" href="mailto:studio.panassociati@pec.it">studio.panassociati@pec.it</a></p>
+    <p><a href="https://www.facebook.com/panassociati/">Facebook</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="https://www.youtube.com/channel/UCbgIvdVyFjuWLhSequXO4Pg">Youtube</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="https://it.linkedin.com/company/pan-associati">LinkedIn</a></p>
 
-    <div class="footer-bottom">
-        <div class="column">
-            <h1>Office</h1>
-            <p><a class="text-link" href="https://maps.app.goo.gl/4BmQPbvBmLEBtHKx5">Via Don Carlo Porro 6<br>20128 Milano (MI)<br>Italia</a></p>
-        </div>
-        <div class="column">
-            <h1>Infos</h1>
-            <p>Tel:&nbsp;<a class="text-link" href="tel:0039022578982">0039 02 257 8982</a>
-            <br>Email:&nbsp;<a class="text-link" href="mailto:studio@panassociati.it">studio@panassociati.it</a>
-            <br>Pec:&nbsp;<a class="text-link" href="mailto:studio.panassociati@pec.it">studio.panassociati@pec.it</a></p>
-        </div>
-        <div class="column">
-            <h1>Socials</h1>
-            <p><a href="https://www.facebook.com/panassociati/">Facebook</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="https://www.youtube.com/channel/UCbgIvdVyFjuWLhSequXO4Pg">Youtube</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="https://it.linkedin.com/company/pan-associati">LinkedIn</a><br>&nbsp;<br>&nbsp;</p>
-        </div>
-    </div>
-
-  <p class="foot">PAN Associati s.r.l.&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;© Copyright 2024&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a class="text-link" href="privacy">Privacy e Cookie Policy</a></p>
+    <p>PAN Associati s.r.l.&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;© Copyright 2024&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a class="text-link" href="privacy">Privacy e Cookie Policy</a></p>
+  </div>
 </footer>
 
 <script>
