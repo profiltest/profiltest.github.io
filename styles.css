@@ -198,6 +198,7 @@ h2 {
 
 h3 {
   font-size: 26px;
+  font-weight: 400;
 }
 
 /* separators */
@@ -411,7 +412,7 @@ body.dark-mode input.send {
 .module {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); /* Minimum width of 300px */
-  gap: 50px;
+  gap: 100px;
   max-width: 100%;
 }
 
@@ -424,8 +425,29 @@ body.dark-mode input.send {
   max-width: 100%;
 }
 
-.portrait{
+.portrait {
   height: 300px;
+}
+
+#list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Minimum width of 300px */
+  gap: 0px;
+  max-width: 100%;
+}
+
+#list p {
+  border-bottom: 1px solid;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+#partner {
+  display: inline-block;
+  margin: 20px 15px 0px 0px;
+  width: auto;
+  height: 80px;
 }
 
 /* responsive */
