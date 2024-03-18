@@ -243,6 +243,8 @@ a.hermit-link p , a.hermit-link h3 {
   text-overflow: ellipsis;
 }
 
+a.hermit-link p {margin-top: 10px;}
+
 a.color-reversed-link {
   width: 118px;
   padding: 6px 11px;
