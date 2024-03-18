@@ -12,7 +12,7 @@ body {
 
 /* header */
 
-.header {
+header {
   padding: 14px 30px; 
   position: fixed;
   top: 0;
@@ -22,7 +22,7 @@ body {
   background-color: #fff; /* white */
 }
 
-.header img {
+header img {
   height: 45px;
   vertical-align: middle; 
   float: left;  
@@ -82,7 +82,7 @@ body {
   transition: 0.3s;
 }
 
-.sidenav a:hover, .sub-links a:hover , .header img:hover , .burger:hover {
+.sidenav a:hover, .sub-links a:hover , header img:hover , .burger:hover {
   transition: 0.5s;
   opacity: 0.33;
 }
@@ -137,17 +137,15 @@ body {
 
 /* footer */
 
-footer{
+footer {
   width: calc(100% - 60px);
   padding: 45px 30px 15px 30px;
-
   background-color: #f0f0f0; /* lightgrey */
 }
 
-footer img{
-  float: right;
-  max-width: 497.5px;
-  margin: 20px 0 0 0;
+footer img {
+  max-height: 45px;
+  margin-bottom: 15px;
 }
 
 /* main */
@@ -205,7 +203,7 @@ h3 {
 
 .small-separator {height: 10px;}
 .big-separator {height: 30px;}
-.mega-separator {height: 120px;}
+.mega-separator {height: 75px;}
 .line-separator {border-bottom: 1px solid grey;}
 
 /* links */
@@ -233,14 +231,13 @@ a.hermit-link {
   display: block;
   line-height: 32px;
   padding: 5px 0px 3px 0px;
-  margin: 0px 0px 25px 0px;
+  margin: 0;
   border-bottom: 1px solid;
   color: inherit;
-
 }
 
 a.hermit-link p , a.hermit-link h3 {
-  margin: 7px 0;
+  margin: 0;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -411,9 +408,13 @@ body.dark-mode input.send {
 
 .module {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); /* Minimum width of 300px */
-  gap: 100px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Minimum width of 300px */
+  gap: 50px 100px;
   max-width: 100%;
+}
+
+footer .module {
+  gap: 0px 100px;
 }
 
 /* faces container */
@@ -464,7 +465,6 @@ body.dark-mode input.send {
 }
 
 @media only screen and (max-width: 1080px) {
-  footer img {display: none;}
   #responsive-reverse {display: flex; flex-direction: column-reverse;}
   .sidenav.open {width: 100%;}
   .desktop-menu {display: none;}

@@ -53,7 +53,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 <body>
 
-<header class="header">
+<header>
   <div id="burger" class="burger" onclick="toggleNav()">
     <div class="bar1"></div>
     <div class="bar2"></div>
@@ -72,7 +72,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </label>
   </div>
   <div class="desktop-menu">
-    <a href="404">Studio</a>
+    <a href="studio">Studio</a>
     <a href="news">News</a>
     <a href="#" onclick="toggleMenu('servicesMenu', event);">Projects</a>
     <ul id="servicesMenu" class="dropdown-menu">
@@ -89,7 +89,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <!--MENU-->
 <div id="mySidenav" class="sidenav">
-  <a href="404">Studio</a>
+  <a href="studio">Studio</a>
   <a href="news">News</a>
   <div class="sub-links">
     <a href="#" onclick="toggleSubNav()">Projects</a>
