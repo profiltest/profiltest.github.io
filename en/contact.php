@@ -120,8 +120,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </main>
 
 <footer>
-  <img class="svg-img" src="../elements/pan_associati_ext.svg">
-  <div class="module">
+  <img id="head-foot" class="svg-img" src="../elements/pan_associati_ext.svg">
+  <div class="footer">
     <div>
       <p><a class="text-link" href="https://maps.app.goo.gl/4BmQPbvBmLEBtHKx5">Via Don Carlo Porro 6<br>20128 Milano (MI)<br>Italia</a></p>
     </div>
@@ -133,6 +133,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <div>
       <p><a href="https://www.facebook.com/panassociati/">Facebook</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="https://www.youtube.com/channel/UCbgIvdVyFjuWLhSequXO4Pg">Youtube</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="https://it.linkedin.com/company/pan-associati">LinkedIn</a></p>
     </div>
+    <div>
+      <a href="https://www.accredia.it/"><img id="accred" class="svg-img" src="../elements/accredia.svg"></a>
+      <a href="https://www.sgs.com/it-it"><img id="accred" class="svg-img" src="../elements/sgs.svg"></a>
+    </div>
   </div>
   <div class="mega-separator"></div>
   <p class="note">PAN Associati s.r.l.&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;© Copyright 2024&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a class="text-link" href="privacy">Privacy e Cookie Policy</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Construit avec &#9825; par <a href="https://baptistelevaux.github.io/">BSL</a></p>
@@ -142,12 +146,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 // HEADER MENU NAV
 
 function toggleNav() {
-  document.getElementById("burger").classList.toggle("change");
-  document.getElementById("mySidenav").classList.toggle("open");
+document.getElementById("burger").classList.toggle("change");
+document.getElementById("mySidenav").classList.toggle("open");
 }
-
 function toggleSubNav() {
-  document.getElementById("subNavLinks").classList.toggle("show");
+ document.getElementById("subNavLinks").classList.toggle("show");
 }
 
 //DESKTOP MENU
@@ -163,69 +166,78 @@ if (menu.style.display === "block") {
 }
 
 // DARK MODE
+
 document.addEventListener('DOMContentLoaded', function() {
-  const darkModeToggle = document.getElementById('darkModeToggle');
-  
-  // Check if dark mode preference is stored in local storage
-  const isDarkMode = localStorage.getItem('darkMode') === 'true';
+const darkModeToggle = document.getElementById('darkModeToggle');
+// Check if dark mode preference is stored in local storage
+const isDarkMode = localStorage.getItem('darkMode') === 'true';
+// Set initial dark mode state based on local storage
+if (isDarkMode) {
+document.body.classList.add('dark-mode');
+darkModeToggle.checked = true;
+}
+// Toggle dark mode function
+function toggleDarkMode() {
+const isDarkMode = document.body.classList.contains('dark-mode');
+localStorage.setItem('darkMode', !isDarkMode); // Store dark mode state in local storage
+document.body.classList.toggle('dark-mode');
+}
+// Event listener for dark mode toggle switch
+darkModeToggle.addEventListener('change', toggleDarkMode);
+});
 
-  // Set initial dark mode state based on local storage
-  if (isDarkMode) {
-    document.body.classList.add('dark-mode');
-    darkModeToggle.checked = true;
-  }
+// SECTION SHOWER
 
-  // Toggle dark mode function
-  function toggleDarkMode() {
-    const isDarkMode = document.body.classList.contains('dark-mode');
-    localStorage.setItem('darkMode', !isDarkMode); // Store dark mode state in local storage
-    document.body.classList.toggle('dark-mode');
-  }
-
-  // Event listener for dark mode toggle switch
-  darkModeToggle.addEventListener('change', toggleDarkMode);
+const sections = document.querySelectorAll('.toggleable-section');
+const buttons = document.querySelectorAll('.showSectionButton');
+// Show section0 when the page loads
+document.getElementById('section0').classList.remove('hidden');
+// Add event listener to each button
+buttons.forEach(button => {
+button.addEventListener('click', function() {
+const sectionId = button.getAttribute('data-section-id');
+// Hide all toggleable sections
+sections.forEach(section => {
+section.classList.add('hidden');
+});
+// Show the corresponding section
+document.getElementById(sectionId).classList.remove('hidden');
+});
 });
 
 //SLIDESHOWS
 
 function initializeSlider(sliderId) {
-  let currentIndex = 0;
-  const slides = document.querySelectorAll(`#${sliderId} .slide`);
-  const totalSlides = slides.length;
-  let slideWidth = slides[0].clientWidth;
-  const slider = document.querySelector(`#${sliderId} .slides`);
-
-  function nextSlide() {
-    currentIndex = (currentIndex + 1) % totalSlides;
-    updateSlider();
-  }
-
-  function updateSlider() {
-    const offset = -currentIndex * slideWidth;
-    slider.style.transition = 'transform 2s ease';
-    slider.style.transform = `translateX(${offset}px)`;
-  }
-
-  setInterval(nextSlide, 6000); // Auto slide every 6 seconds
-
-  // Function to update slide widths based on window size
-  function updateSlideWidths() {
-    slideWidth = slides[0].clientWidth;
-    const offset = -currentIndex * slideWidth;
-    slider.style.transition = 'none';
-    slider.style.transform = `translateX(${offset}px)`;
-    setTimeout(() => {
-      slider.style.transition = '';
-    });
-  }
-
-  // Update slide widths when window is resized
-  window.addEventListener('resize', updateSlideWidths);
-
-  // Call the function once on page load to set initial slide widths
-  updateSlideWidths();
+let currentIndex = 0;
+const slides = document.querySelectorAll(`#${sliderId} .slide`);
+const totalSlides = slides.length;
+let slideWidth = slides[0].clientWidth;
+const slider = document.querySelector(`#${sliderId} .slides`);
+function nextSlide() {
+currentIndex = (currentIndex + 1) % totalSlides;
+updateSlider();
 }
-
+function updateSlider() {
+const offset = -currentIndex * slideWidth;
+slider.style.transition = 'transform 2s ease';
+slider.style.transform = `translateX(${offset}px)`;
+}
+setInterval(nextSlide, 6000); // Auto slide every 6 seconds
+// Function to update slide widths based on window size
+function updateSlideWidths() {
+slideWidth = slides[0].clientWidth;
+const offset = -currentIndex * slideWidth;
+slider.style.transition = 'none';
+slider.style.transform = `translateX(${offset}px)`;
+setTimeout(() => {
+slider.style.transition = '';
+});
+}
+// Update slide widths when window is resized
+window.addEventListener('resize', updateSlideWidths);
+// Call the function once on page load to set initial slide widths
+updateSlideWidths();
+}
 // Initialize sliders
 initializeSlider('slider1');
 initializeSlider('slider2');
