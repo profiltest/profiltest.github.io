@@ -85,7 +85,6 @@
 
 <main class="direct-content">
   <section class="mono">
-    <div class="text-elements">
       <h2>Contatti</h2>
       <p>Siamo entusiasti di avere l'opportunità di connetterci con te. Qui, crediamo che ogni contatto sia una potenziale occasione di collaborazione e crescita reciproca.</p>
       <p>Se sei curioso di conoscere meglio il nostro lavoro e il nostro approccio progettuale, ti invitiamo a visitare la sezione <a href="studio">Studio</a>. Qui potrai scoprire la nostra filosofia di lavoro e il nostro team.</p>
@@ -93,44 +92,26 @@
       <p>Tel:&nbsp;<a class="text-link" href="tel:0039022578982">0039 02 257 8982</a>
       <br>Email:&nbsp;<a class="text-link" href="mailto:studio@panassociati.it">studio@panassociati.it</a>
       <br>Pec:&nbsp;<a class="text-link" href="mailto:studio.panassociati@pec.it">studio.panassociati@pec.it</a></p>
-      <p><a href="https://www.facebook.com/panassociati/">Facebook</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="https://www.youtube.com/channel/UCbgIvdVyFjuWLhSequXO4Pg">Youtube</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="https://it.linkedin.com/company/pan-associati">LinkedIn</a><br>&nbsp;<br>&nbsp;</p>
-    </div>
+      <p><a href="https://www.facebook.com/panassociati/">Facebook</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="https://www.youtube.com/channel/UCbgIvdVyFjuWLhSequXO4Pg">Youtube</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="https://it.linkedin.com/company/pan-associati">LinkedIn</a></p>
   </section>
 <!--#2-->
   <section class="mono">
-    <div class="text-elements">
       <h2>Hai qualcosa in più?</h2>
       <p>In un contesto collaborativo, PA+N Associati ti offre l'opportunità di far parte di un team dinamico, dove la tua crescita personale e professionale è al centro della nostra attenzione. Il nostro studio, focalizzato sull'innovazione e la ricerca, si impegna a trasformare ogni progetto in un'avventura di scoperta. Collaborerai con un gruppo di professionisti appassionati, impegnati nel plasmare il futuro dell'architettura attraverso la progettazione e la gestione dei progetti.</p>
-      <button class="showSectionButton" data-section-id="section1">Candidatura spontanea</button>
-      <button class="showSectionButton" data-section-id="section2">Architetto del paesaggio</button>
-      <button class="showSectionButton" data-section-id="section3">Lavoro 3</button>
-    </div>
+      <div class="link-box">
+        <button class="showSectionButton" data-section-id="section0">Candidatura spontanea</button>
+        <button class="showSectionButton" data-section-id="section1">Architetto del paesaggio</button>
+        <button class="showSectionButton" data-section-id="section2">Lavoro 2</button>
+      </div>
   </section>
 <!--#3-->
-  <section id="section1" class="mono toggleable-section hidden">
-    <div class="text-elements">
+  <section id="section0" class="mono toggleable-section hidden">
       <h3>Candidatura spontanea</h3>
       <h1>Responsabilità</h1>
       <p>PA+N Associati accoglie con favore candidature spontanee da individui determinati e qualificati che desiderano contribuire al nostro impegno nell'architettura e la progettazione. Se ritenete di possedere le competenze e l'entusiasmo necessari per unirvi a noi in questa missione, vi invitiamo cortesemente a inviare la vostra candidatura. Siamo costantemente alla ricerca di professionisti motivati, pronti a condividere la nostra visione e a contribuire al successo dell'azienda con impegno e dedizione.</p>
-
-      <h1>Scrivici!</h1>
-      <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-        <p>Nome:</p>
-        <input class="fill" type="text" id="name" name="name" placeholder="Maria Rossi" required>
-        <p>Email:</p>
-        <input class="fill" type="email" id="email" name="email" placeholder="mariarossi@esempio.it" required>
-        <p>Messagio:</p>
-        <textarea id="message" name="message" placeholder="Ciao associati!" required></textarea>
-        <label class="file-label" for="document">Carica un curriculum</label>
-        <!-- Actual file input -->
-        <input type="file" id="document" name="document" accept=".pdf,.doc,.docx" required>
-        <input class="send" type="submit" value="Invia candidatura">
-      </form>
-    </div>
   </section>
 <!--#4-->
-  <section id="section2" class="mono toggleable-section hidden">
-    <div class="text-elements">
+  <section id="section1" class="mono toggleable-section hidden">
       <h3>Architetto del paesaggio</h3>
       <h1>Responsabilità</h1>
       <ul class="list">
@@ -150,9 +131,11 @@
       <li>Buone capacità organizzative di intraprendenza.</li>
       <li>Buone capacità comunicative e di presentazione.</li>
       </ul>
-
+  </section>
+<!--#5-->
+  <section class="mono">
       <h1>Scrivici!</h1>
-      <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+      <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?><!--" method="post">-->
         <p>Nome:</p>
         <input class="fill" type="text" id="name" name="name" placeholder="Maria Rossi" required>
         <p>Email:</p>
@@ -160,137 +143,34 @@
         <p>Messagio:</p>
         <textarea id="message" name="message" placeholder="Ciao associati!" required></textarea>
         <label class="file-label" for="document">Carica un curriculum</label>
-        <!-- Actual file input -->
         <input type="file" id="document" name="document" accept=".pdf,.doc,.docx" required>
         <input class="send" type="submit" value="Invia candidatura">
       </form>
-    </div>
   </section>
 </main>
 
 <footer>
-  <img id="head-foot" class="svg-img" src="../elements/pan_associati_ext.svg">
+  <img class="svg-img footer-logo" src="../elements/pan_associati_ext.svg">
   <div class="footer">
     <div>
-      <p><a class="text-link" href="https://maps.app.goo.gl/4BmQPbvBmLEBtHKx5">Via Don Carlo Porro 6<br>20128 Milano (MI)<br>Italia</a></p>
+      <a class="text-link" href="https://maps.app.goo.gl/4BmQPbvBmLEBtHKx5">Via Don Carlo Porro 6<br>20128 Milano (MI)<br>Italia</a>
     </div>
     <div>
-      <p>Tel:&nbsp;<a class="text-link" href="tel:0039022578982">0039 02 257 8982</a>
+      Tel:&nbsp;<a class="text-link" href="tel:0039022578982">0039 02 257 8982</a>
       <br>Email:&nbsp;<a class="text-link" href="mailto:studio@panassociati.it">studio@panassociati.it</a>
-      <br>Pec:&nbsp;<a class="text-link" href="mailto:studio.panassociati@pec.it">studio.panassociati@pec.it</a></p>
+      <br>Pec:&nbsp;<a class="text-link" href="mailto:studio.panassociati@pec.it">studio.panassociati@pec.it</a>
     </div>
     <div>
-      <p><a href="https://www.facebook.com/panassociati/">Facebook</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="https://www.youtube.com/channel/UCbgIvdVyFjuWLhSequXO4Pg">Youtube</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="https://it.linkedin.com/company/pan-associati">LinkedIn</a></p>
+      <a href="https://www.facebook.com/panassociati/">Facebook</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="https://www.youtube.com/channel/UCbgIvdVyFjuWLhSequXO4Pg">Youtube</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="https://it.linkedin.com/company/pan-associati">LinkedIn</a>
     </div>
     <div>
-      <a href="https://www.accredia.it/"><img id="accred" class="svg-img" src="../elements/accredia.svg"></a>
-      <a href="https://www.sgs.com/it-it"><img id="accred" class="svg-img" src="../elements/sgs.svg"></a>
+      <a href="https://www.accredia.it/"><img class="svg-img accred" src="../elements/accredia.svg"></a>
+      <a href="https://www.sgs.com/it-it"><img class="svg-img accred" src="../elements/sgs.svg"></a>
     </div>
   </div>
-  <div class="mega-separator"></div>
   <p class="note">PAN Associati s.r.l.&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;© Copyright 2024&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a class="text-link" href="privacy">Privacy e Cookie Policy</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Construit avec &#9825; par <a href="https://baptistelevaux.github.io/">BSL</a></p>
 </footer>
 
-<script>
-// HEADER MENU NAV
-
-function toggleNav() {
-document.getElementById("burger").classList.toggle("change");
-document.getElementById("mySidenav").classList.toggle("open");
-}
-function toggleSubNav() {
- document.getElementById("subNavLinks").classList.toggle("show");
-}
-
-//DESKTOP MENU
-
-function toggleMenu(menuId, event) {
-event.preventDefault(); // Prevents the default behavior of the link
-var menu = document.getElementById(menuId);
-if (menu.style.display === "block") {
-  menu.style.display = "none";
-} else {
-  menu.style.display = "block";
-}
-}
-
-// DARK MODE
-
-document.addEventListener('DOMContentLoaded', function() {
-const darkModeToggle = document.getElementById('darkModeToggle');
-// Check if dark mode preference is stored in local storage
-const isDarkMode = localStorage.getItem('darkMode') === 'true';
-// Set initial dark mode state based on local storage
-if (isDarkMode) {
-document.body.classList.add('dark-mode');
-darkModeToggle.checked = true;
-}
-// Toggle dark mode function
-function toggleDarkMode() {
-const isDarkMode = document.body.classList.contains('dark-mode');
-localStorage.setItem('darkMode', !isDarkMode); // Store dark mode state in local storage
-document.body.classList.toggle('dark-mode');
-}
-// Event listener for dark mode toggle switch
-darkModeToggle.addEventListener('change', toggleDarkMode);
-});
-
-// SECTION SHOWER
-
-const sections = document.querySelectorAll('.toggleable-section');
-const buttons = document.querySelectorAll('.showSectionButton');
-// Show section0 when the page loads
-document.getElementById('section0').classList.remove('hidden');
-// Add event listener to each button
-buttons.forEach(button => {
-button.addEventListener('click', function() {
-const sectionId = button.getAttribute('data-section-id');
-// Hide all toggleable sections
-sections.forEach(section => {
-section.classList.add('hidden');
-});
-// Show the corresponding section
-document.getElementById(sectionId).classList.remove('hidden');
-});
-});
-
-//SLIDESHOWS
-
-function initializeSlider(sliderId) {
-let currentIndex = 0;
-const slides = document.querySelectorAll(`#${sliderId} .slide`);
-const totalSlides = slides.length;
-let slideWidth = slides[0].clientWidth;
-const slider = document.querySelector(`#${sliderId} .slides`);
-function nextSlide() {
-currentIndex = (currentIndex + 1) % totalSlides;
-updateSlider();
-}
-function updateSlider() {
-const offset = -currentIndex * slideWidth;
-slider.style.transition = 'transform 2s ease';
-slider.style.transform = `translateX(${offset}px)`;
-}
-setInterval(nextSlide, 6000); // Auto slide every 6 seconds
-// Function to update slide widths based on window size
-function updateSlideWidths() {
-slideWidth = slides[0].clientWidth;
-const offset = -currentIndex * slideWidth;
-slider.style.transition = 'none';
-slider.style.transform = `translateX(${offset}px)`;
-setTimeout(() => {
-slider.style.transition = '';
-});
-}
-// Update slide widths when window is resized
-window.addEventListener('resize', updateSlideWidths);
-// Call the function once on page load to set initial slide widths
-updateSlideWidths();
-}
-// Initialize sliders
-initializeSlider('slider1');
-initializeSlider('slider2');
-</script>
-
+<script src="../script-page.js"></script>
 </body>
 </html>
