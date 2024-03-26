@@ -218,8 +218,7 @@ textarea:focus, input:focus {outline: none;}
 /* Footer prev */
 
 .footer-prev {
-  background-color: #f0f0f0;
-  border-bottom: 1px solid grey;
+  background-color: #ffe1e1;
   margin-bottom: 0;
   padding: 30px 30px 50px 30px;
   max-width: calc(100% - 60px);
@@ -498,6 +497,6 @@ body.dark-mode .file-label {background-color: #262626; color: #fff;}
 body.dark-mode .send {background-color: #262626; color: #fff;}
 body.dark-mode .sidenav a , body.dark-mode .sub-links a {color: #fff;}
 body.dark-mode .bar1 , body.dark-mode .bar2 , body.dark-mode .bar3 {background-color: #fff;}
-body.dark-mode .footer-prev {background-color: #262626;}
+body.dark-mode .footer-prev {background-color: #535b57;}
 body.dark-mode img.svg-img {filter: brightness(0) invert(0.95);}
 body.dark-mode .map {filter: grayscale(100%) invert(92%) contrast(83%);}
