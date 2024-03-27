@@ -110,12 +110,13 @@
       <h2>Lavora con noi</h2>
       <p>In un contesto collaborativo, PA+N Associati ti offre l'opportunità di far parte di un team dinamico, dove la tua crescita personale e professionale è al centro della nostra attenzione. Il nostro studio, focalizzato sull'innovazione e la ricerca, si impegna a trasformare ogni progetto in un'avventura di scoperta. Collaborerai con un gruppo di professionisti appassionati, impegnati nel plasmare il futuro dell'architettura attraverso la progettazione e la gestione dei progetti.</p>
       <div class="box">
-        <button class="showSectionButton" data-section-id="section1">Architetto del paesaggio</button>
-        <button class="showSectionButton" data-section-id="section2">Lavoro 2</button>
+        <button class="showSectionButton" onclick="toggleSection('section1')">Architetto del paesaggio</button>
+        <button class="showSectionButton" onclick="toggleSection('section2')">Lavoro 2</button>
+        <button class="showSectionButton" onclick="toggleSection('section3')">Lavoro 3</button>
       </div>
   </section>
 <!--#4-->
-  <section id="section1" class="mono toggleable-section hidden">
+  <section id="section1" class="mono toggle-section">
       <h3>Architetto del paesaggio</h3>
       <h1>Responsabilità</h1>
       <ul class="list">
@@ -166,14 +167,12 @@
     <div>
       <a href="https://www.facebook.com/panassociati/">Facebook</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="https://www.youtube.com/channel/UCbgIvdVyFjuWLhSequXO4Pg">Youtube</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="https://it.linkedin.com/company/pan-associati">LinkedIn</a>
     </div>
-    <div>
-      Qualità ISO 9001 - 2008. Questa certificazione di qualità consente alla società di garantire l’alta qualità del servizio offerto ai loro clienti.
-    </div>
-    <div>
-      <a href="https://www.accredia.it/"><img class="svg-img accred" src="../elements/accredia.svg"></a>
-      <a href="https://www.sgs.com/it-it"><img class="svg-img accred" src="../elements/sgs.svg"></a>
-    </div>
   </div>
+  <div><a href="https://www.accredia.it/"><img class="svg-img accred" src="../elements/accredia.svg"></a>
+      <a href="https://www.sgs.com/it-it"><img class="svg-img accred" src="../elements/sgs.svg"></a><p>Qualità ISO 9001 - 2008. Questa certificazione di qualità consente alla società di garantire l’alta qualità del servizio offerto ai loro clienti.</p>
+      
+    </div>
+
   <p class="note">PAN Associati s.r.l.&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;© Copyright 2024&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a class="text-link" href="privacy">Privacy e Cookie Policy</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Construit avec &#9825; par <a href="https://baptistelevaux.github.io/">BSL</a></p>
 </footer>
 

@@ -11,7 +11,7 @@ function toggleSubNav() {
 //DESKTOP MENU
 
 function toggleMenu(menuId, event) {
-event.preventDefault(); // Prevents the default behavior of the link
+event.preventDefault(); 
 var menu = document.getElementById(menuId);
 if (menu.style.display === "block") {
   menu.style.display = "none";
@@ -24,38 +24,58 @@ if (menu.style.display === "block") {
 
 document.addEventListener('DOMContentLoaded', function() {
 const darkModeToggle = document.getElementById('darkModeToggle');
-// Check if dark mode preference is stored in local storage
 const isDarkMode = localStorage.getItem('darkMode') === 'true';
-// Set initial dark mode state based on local storage
 if (isDarkMode) {
 document.body.classList.add('dark-mode');
 darkModeToggle.checked = true;
 }
-// Toggle dark mode function
 function toggleDarkMode() {
 const isDarkMode = document.body.classList.contains('dark-mode');
-localStorage.setItem('darkMode', !isDarkMode); // Store dark mode state in local storage
+localStorage.setItem('darkMode', !isDarkMode);
 document.body.classList.toggle('dark-mode');
 }
-// Event listener for dark mode toggle switch
 darkModeToggle.addEventListener('change', toggleDarkMode);
 });
 
 // SECTION SHOWER
 
-const sections = document.querySelectorAll('.toggleable-section');
-const buttons = document.querySelectorAll('.showSectionButton');
-// Show section0 when the page loads
-document.getElementById('section0').classList.remove('hidden');
-// Add event listener to each button
-buttons.forEach(button => {
-button.addEventListener('click', function() {
-const sectionId = button.getAttribute('data-section-id');
-// Hide all toggleable sections
+function toggleSection(sectionId) {
+var sections = document.getElementsByClassName('toggle-section');
+for (var i = 0; i < sections.length; i++) {
+if (sections[i].id === sectionId) {
+sections[i].style.display = 'block';
+} else {
+sections[i].style.display = 'none';
+}
+}
+}
+
+// SECTION FILTER
+
+const filterButtons = document.querySelectorAll('.filter-btn');
+const sections = document.querySelectorAll('.news-section');
+const showAllButton = document.querySelector('.show-all-btn');
+filterButtons.forEach(button => {
+button.addEventListener('click', () => {
+const filterValue = button.getAttribute('data-filter');
 sections.forEach(section => {
-section.classList.add('hidden');
+if (section.classList.contains(filterValue)) {
+section.style.display = 'block';
+} else {
+section.style.display = 'none';
+}
 });
-// Show the corresponding section
-document.getElementById(sectionId).classList.remove('hidden');
+filterButtons.forEach(btn => {
+btn.classList.remove('active');
+});
+button.classList.add('active');
+});
+});
+showAllButton.addEventListener('click', () => {
+sections.forEach(section => {
+section.style.display = 'block';
+});
+filterButtons.forEach(btn => {
+btn.classList.remove('active');
 });
 });
