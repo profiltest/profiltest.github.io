@@ -53,29 +53,40 @@ sections[i].style.display = 'none';
 // SECTION FILTER
 
 const filterButtons = document.querySelectorAll('.filter-btn');
-const sections = document.querySelectorAll('.news-section');
-const showAllButton = document.querySelector('.show-all-btn');
-filterButtons.forEach(button => {
-button.addEventListener('click', () => {
-const filterValue = button.getAttribute('data-filter');
-sections.forEach(section => {
-if (section.classList.contains(filterValue)) {
-section.style.display = 'block';
-} else {
-section.style.display = 'none';
-}
-});
-filterButtons.forEach(btn => {
-btn.classList.remove('active');
-});
-button.classList.add('active');
-});
-});
-showAllButton.addEventListener('click', () => {
-sections.forEach(section => {
-section.style.display = 'block';
-});
-filterButtons.forEach(btn => {
-btn.classList.remove('active');
-});
-});
+  const sections = document.querySelectorAll('.news-section');
+  const showAllButton = document.querySelector('.show-all-btn');
+
+  filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const filterValue = button.getAttribute('data-filter');
+
+      // Toggle visibility based on classes
+      sections.forEach(section => {
+        if (section.classList.contains(filterValue)) {
+          section.style.display = 'block';
+        } else {
+          section.style.display = 'none';
+        }
+      });
+
+      // Remove active class from all buttons
+      filterButtons.forEach(btn => {
+        btn.classList.remove('active');
+      });
+
+      // Add active class to clicked button
+      button.classList.add('active');
+    });
+  });
+
+  showAllButton.addEventListener('click', () => {
+    // Show all sections
+    sections.forEach(section => {
+      section.style.display = 'block';
+    });
+
+    // Remove active class from all buttons
+    filterButtons.forEach(btn => {
+      btn.classList.remove('active');
+    });
+  });
