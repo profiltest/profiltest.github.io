@@ -15,6 +15,7 @@ body {
 main {margin: 0; padding-top: 72px;}
 section {width: 100%; margin: 50px 0;}
 section.accueil , section.accueil-page {margin: 0;}
+section.centered {text-align: center;}
 
 /* texts */
 
@@ -160,6 +161,55 @@ main img {
     0%, 100% { transform: translateY(0); }
     10%, 30%, 50% { transform: translateY(-10px); }
     80% { transform: translateY(-10px); }
+}
+
+/* thumbnail shower */
+
+.thumbnail-shower {
+  margin: 75px 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 25px 5px;
+  max-width: 100%;
+}
+
+.thumbnail {
+  background-color: grey;
+  height: auto;
+  aspect-ratio: 3 / 1.75;
+  margin: 0 0 auto;
+  position: relative; 
+}
+
+.thumb p {text-align: right; margin: 5px 0 0 0; padding: 0;}
+.thumb p.quote {font-size: 14px; margin: 0; color: inherit} 
+
+.thumbnail p {
+  font-size: 100px;
+  font-weight: 100;
+  padding: 0px; 
+  margin: 0;
+  text-align: center;
+  opacity: 0; 
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute; 
+  top: 0;
+  left: 0;
+  width: 100%; 
+  height: 100%;
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  transition: opacity 0.7s ease;
+  color: white;
+}
+
+.thumbnail img {
+  height: 100%;
+}
+
+a.thumb:hover .thumbnail p , a.thumb:hover  {
+  opacity: 1; 
 }
 
 /* showers & forms & buttons */
