@@ -40,8 +40,8 @@
   </div>
   <div class="desktop-menu">
     <a href="studio">Studio</a>
-    <a href="news">News</a>
-    <a href="#" onclick="toggleMenu('servicesMenu', event);">Progetti</a>
+    <a href="progetti">Progetti</a>
+    <!--<a href="#" onclick="toggleMenu('servicesMenu', event);">Progetti</a>
     <ul id="servicesMenu" class="dropdown-menu">
       <li><a href="progetti/index">Tutti i progetti</a></li>
       <li><a href="progetti/index.html?filter=section1">Rigenerazione spazi urbani</a></li>
@@ -49,7 +49,8 @@
       <li><a href="progetti/index.html?filter=section3">Riqualificazione ambientale e paesaggistica</a></li>
       <li><a href="progetti/index.html?filter=section4">Inserimento ambientale di infrastrutture</a></li>
       <li><a href="progetti/index.html?filter=section5">Architettura</a></li>
-    </ul>
+    </ul>-->
+    <a href="news">News</a>
     <a href="contatti">Contatti</a>
   </div>
 </header>
@@ -57,8 +58,8 @@
 <!--MENU-->
 <div id="mySidenav" class="sidenav">
   <a href="studio">Studio</a>
-  <a href="news">News</a>
-  <div class="sub-links">
+  <a href="progetti">Progetti</a>
+  <!--<div class="sub-links">
     <a href="#" onclick="toggleSubNav()">Progetti</a>
     <div id="subNavLinks" class="sub-nav-links">
       <a href="progetti/index">Tutti i progetti</a>
@@ -68,7 +69,8 @@
       <a href="progetti/index.html?filter=section4">Inserimento ambientale di infrastrutture</a>
       <a href="progetti/index.html?filter=section5">Architettura</a>
     </div>
-  </div>
+  </div>-->
+  <a href="news">News</a>
   <a href="contatti">Contatti</a>
   <div class="lang-switch" id="LS2">
     <a href="../en/contact">EN</a>&nbsp;&nbsp;|&nbsp;
@@ -99,62 +101,15 @@
       <br>Pec:&nbsp;<a class="text-link" href="mailto:studio.panassociati@pec.it">studio.panassociati@pec.it</a></p>
       <p><a href="https://www.facebook.com/panassociati/">Facebook</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="https://www.youtube.com/channel/UCbgIvdVyFjuWLhSequXO4Pg">Youtube</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="https://it.linkedin.com/company/pan-associati">LinkedIn</a></p>
   </section>
-<!--#2-->
+<!--#3-->
   <section class="mono">
     <div class="box">
       <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2795.915429844313!2d9.22706047663193!3d45.51178103026217!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c76cb54d5f97%3A0xe5e7c5305b456d6b!2sVia%20Don%20Carlo%20Porro%2C%206%2C%2020128%20Milano%20MI%2C%20Italie!5e0!3m2!1sfr!2sbe!4v1711440146140!5m2!1sfr!2sbe" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
   </section>
-<!--#3-->
-  <section class="mono">
-      <h2>Lavora con noi</h2>
-      <p>In un contesto collaborativo, PA+N Associati ti offre l'opportunità di far parte di un team dinamico, dove la tua crescita personale e professionale è al centro della nostra attenzione. Il nostro studio, focalizzato sull'innovazione e la ricerca, si impegna a trasformare ogni progetto in un'avventura di scoperta. Collaborerai con un gruppo di professionisti appassionati, impegnati nel plasmare il futuro dell'architettura attraverso la progettazione e la gestione dei progetti.</p>
-      <div class="box">
-        <button class="showSectionButton" onclick="toggleSection('section1')">Architetto del paesaggio</button>
-        <button class="showSectionButton" onclick="toggleSection('section2')">Lavoro 2</button>
-        <button class="showSectionButton" onclick="toggleSection('section3')">Lavoro 3</button>
-      </div>
-  </section>
-<!--#4-->
-  <section id="section1" class="mono toggle-section">
-      <h3>Architetto del paesaggio</h3>
-      <h1>Responsabilità</h1>
-      <ul class="list">
-      <li>Partecipazione attiva a tutte le fasi del processo di progettazione.</li>
-      <li>Collaborare con il team nella progettazione e sviluppo di progetti paesaggistici e di riqualificazione urbana.</li>
-      <li>Contribuire con idee innovative e soluzioni sostenibili ai progetti in corso.</li>
-      <li>Buone capacità di ideazione del concept progettuale.</li>
-      <li>Elaborazione grafica e testuale per le diverse fasi di progetto.</li>
-      </ul>
-      <h1>Qualifiche</h1>
-      <ul class="list">
-      <li>Laurea in Architettura o Architettura del Paesaggio.</li>
-      <li>Esperienza professionale di almeno 1-3 anno nel settore.</li>
-      <li>Buona conoscenza dei principali software di progettazione e modellazione ( Autocad, suite Adobe, Office, eventuali software per la computistica, SketchUp, la conoscenza di modellazione in BIM sarà considerata un Plus).</li>
-      <li>Capacità di lavorare in team e di problem solving.</li>
-      <li>Buone capacità organizzative di intraprendenza.</li>
-      <li>Buone capacità comunicative e di presentazione.</li>
-      </ul>
-  </section>
-<!--#4-->
-  <section class="mono">
-      <h1>Scrivici!</h1>
-      <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?><!--" method="post">-->
-        <p>Nome:</p>
-        <input class="fill" type="text" id="name" name="name" placeholder="Maria Rossi" required>
-        <p>Email:</p>
-        <input class="fill" type="email" id="email" name="email" placeholder="mariarossi@esempio.it" required>
-        <p>Messagio:</p>
-        <textarea id="message" name="message" placeholder="Ciao associati!" required></textarea>
-        <label class="file-label" for="document">Carica un curriculum</label>
-        <input type="file" id="document" name="document" accept=".pdf,.doc,.docx" required>
-        <input class="send" type="submit" value="Invia candidatura">
-      </form>
-  </section>
 </main>
 
 <footer>
-  <img class="svg-img footer-logo" src="../elements/pan_associati_ext.svg">
   <div class="footer">
     <div>
       <a class="text-link" href="https://maps.app.goo.gl/4BmQPbvBmLEBtHKx5">Via Don Carlo Porro 6<br>20128 Milano (MI)<br>Italia</a>
@@ -176,6 +131,6 @@
     <br>Qualità ISO 9001 - 2008. Questa certificazione di qualità consente alla società di garantire l’alta qualità del servizio offerto ai loro clienti.</p>
 </footer>
 
-<script src="../script-page.js"></script>
+<script src="../script-home.js"></script>
 </body>
 </html>
