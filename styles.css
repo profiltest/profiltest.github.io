@@ -63,9 +63,13 @@ h3 {
 
 .note {font-size: 15px;}
 
-/* links */
+/* box */
 
 .box {margin: 20px 30px;}
+
+.box img {margin-bottom: 10px}
+
+/* links */
 
 a {
   font-weight: 500;
@@ -233,7 +237,7 @@ button.showSectionButton {
 
 .classic-link , input.send , button.divtoggler , .file-label {
   cursor: pointer;
-  color: #ff1515;
+  color: #ff3a3a;
   font-family: Roboto;
   font-weight: 400;
   font-size: 26px;
@@ -335,12 +339,8 @@ textarea:focus, input:focus {outline: none;}
 
 /* PROJECT PAGE */
 
-.cartouche {
-  position: sticky;
-}
-
-.cartouche ul {
-  max-width: 325px;
+ul.cartouche {
+  max-width: 100%;
   padding: 0 30px 0 30px;
   margin-top: -15px;
 }
@@ -355,18 +355,17 @@ textarea:focus, input:focus {outline: none;}
 
 @media only screen and (min-width: 1080px) {
   .split {display: grid; grid-template-columns: repeat(2, 1fr);}
-  .mono {width: 60%; margin: 150px 2.5% 150px 37.5%;}
+  .mono {width: 60%; margin: 100px 2.5% 100px 37.5%;}
   .sidenav.open {width: 50%;}
   .burger , .sidenav {display: none;}
-  .cartouche ul {float: left;}
 }
 
 @media only screen and (max-width: 1080px) {
   #responsive-reverse {display: flex; flex-direction: column-reverse;}
+  .mono {margin: 100px 0 100px 0;}
   .sidenav.open {width: 100%;}
   .desktop-menu {display: none;}
   #DMB1 , #LS1 {display: none;}
-  .cartouche ul {max-width: 100%;}
 }
 
 /* footer */
@@ -377,7 +376,8 @@ footer {
   padding: 100px 30px 15px 30px;
 }
 
-.accred {max-height: 50px; margin: 5px 20px 0 0;}
+.accred {max-height: 45px; padding: 0px 20px 0 0; float: left;}
+
 footer .note {margin: 0;}
 
 /* header */
@@ -389,7 +389,7 @@ header {
   left: 0;
   width: calc(100% - 60px);
   z-index: 3;
-  background-color: #fff;
+  background-color: white;
 }
 
 header img {
@@ -398,7 +398,7 @@ header img {
   float: left;  
 }
 
-/* burger menu */
+/* menu */
 
 .burger {
   float: right; 
@@ -463,28 +463,10 @@ a:hover , .sidenav a:hover, .sub-links a:hover , header img:hover , .burger:hove
   opacity: 0.33;
 }
 
-.sub-nav-links {display: none;}
-.sub-nav-links.show {display: block;}
-.sub-nav-links a {opacity: 0.33; font-size: 22px;}
-
 /* desktop menu */
 
 .desktop-menu {float: right; margin-top: 9px;}
 .desktop-menu a {margin-right: 45px; font-size: 21px; font-weight: 400;}
-
-.dropdown-menu {
-  margin-left: 187px ;
-  height: 100vh;
-  display: none;
-  position: absolute;
-  background-color: #fff; /* white */
-  width: 100%;
-  padding: 0px 20px;
-  z-index: 1;
-}
-
-.dropdown-menu li {display: block; padding: 15px 0px;}
-.dropdown-menu a {font-size: 18px; font-weight: 500; opacity: 0.33;}
 
 /* Lang switch */
 
@@ -505,8 +487,8 @@ a:hover , .sidenav a:hover, .sub-links a:hover , header img:hover , .burger:hove
 
 /* DarkMode switch */
 
-#DMB1 {float: right; margin: 11px 30px 0 0;}
-#DMB2 {margin: 30px 70px;}
+#DMB1 {float: right; margin: 11px 33px 0 0;}
+#DMB2 {margin: -25px 130px;}
 
 .darkModeToggle {
   display: none;
@@ -515,44 +497,27 @@ a:hover , .sidenav a:hover, .sub-links a:hover , header img:hover , .burger:hove
 .darkModeLabel {
   position: relative;
   display: inline-block;
-  width: 40px;
-  height: 20px;
-}
-
-.darkModeLabel .darkModeSlider {
-  position: absolute;
+  width: 23px;
+  height: 23px;
   cursor: pointer;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #e1e1e1; 
-  transition: 0.4s;
-  border-radius: 20px;
-}
-
-.darkModeLabel .darkModeSlider:before {
-  position: absolute;
-  content: "";
-  height: 16px;
-  width: 16px;
-  left: 2px;
-  bottom: 2px;
-  background-color: white;
-  transition: 0.4s;
-  border-radius: 50%;
+  background-image: url('elements/dm-moon.svg');
+  background-color: transparent;
+  background-size: cover;
 }
 
 /* DarkMode styles */
 
-.darkModeToggle:checked + .darkModeLabel .darkModeSlider {background-color: #2f2f2f;}
-.darkModeToggle:checked + .darkModeLabel .darkModeSlider:before {transform: translateX(20px);}
+.darkModeToggle:checked + .darkModeLabel {background-image: url('elements/dm-sun.svg');}
 
 body.dark-mode {background-color: #1B1B1A; color: #fff;}
 body.dark-mode header {background-color: #1B1B1A; color: #fff;}
 body.dark-mode .sidenav {background-color: #1B1B1A;}
 body.dark-mode .dropdown-menu {background-color: #1B1B1A;}
-body.dark-mode footer { color: #fff;}
+body.dark-mode footer {background-color: #1B1B1A; color: #fff;}
 body.dark-mode .sidenav a , body.dark-mode .sub-links a {color: #fff;}
 body.dark-mode .bar1 , body.dark-mode .bar2 , body.dark-mode .bar3 {background-color: #fff;}
 body.dark-mode .footer-prev {background-color: #262626;}
