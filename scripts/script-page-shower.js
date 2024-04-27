@@ -28,6 +28,19 @@ darkModeToggle1.addEventListener('change', toggleDarkMode);
 darkModeToggle2.addEventListener('change', toggleDarkMode);
 });
 
+// DIV SHOWER
+
+function toggleDiv(divId) {
+var divs = document.getElementsByClassName('toggle-div');
+for (var i = 0; i < divs.length; i++) {
+if (divs[i].id === divId) {
+divs[i].style.display = 'block';
+} else {
+divs[i].style.display = 'none';
+}
+}
+}
+
 // SECTION SHOWER
 
 const sectionsToShowOnLoad = document.querySelectorAll('.mono.news-section.section1');
