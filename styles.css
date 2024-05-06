@@ -14,6 +14,7 @@ body {
 /* main */
 
 main {margin: 0; padding-top: 72px;}
+
 section {width: 100%; margin: 50px 0;}
 section.accueil , section.accueil-page {margin: 0;}
 
@@ -23,6 +24,31 @@ section.centered {
   display: grid;
   gap: 50px;
   width: calc(100% - 60px);
+}
+
+section.duo {
+  max-width: 1500px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+section.mosaic {
+  max-width: 1430px;
+  margin: 65px auto;
+  padding: 0 30px;
+  overflow: hidden;
+  font-size: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(calc(16.66% - 10px), 1fr)); /* Three columns with equal width */
+  gap: 10px;
+}
+
+section.long {
+  display: inline-block;
+  border-left: 6px solid #ff3a3a;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  padding-bottom: 40px;
 }
 
 /* texts */
@@ -64,8 +90,8 @@ h3 {
 /* box */
 
 .box {margin: 20px 30px;}
-
 .box img {margin-bottom: 10px}
+.mosaic img {aspect-ratio: 3/2; height: auto; width: 100%;}
 
 /* links */
 
@@ -353,6 +379,7 @@ ul.cartouche {
 @media only screen and (min-width: 1080px) {
   .split {display: grid; grid-template-columns: repeat(2, 1fr);}
   .mono {width: 60%; margin: 100px 2.5% 100px 37.5%;}
+  .long {width: calc(60% - 20px);}
   .sidenav.open {width: 50%;}
   .burger , .sidenav {display: none;}
 }
@@ -365,9 +392,18 @@ ul.cartouche {
 @media only screen and (max-width: 1080px) {
   #responsive-reverse {display: flex; flex-direction: column-reverse;}
   .mono {margin: 100px 0 100px 0;}
+  .long {width: calc(100% - 40px); margin-left: 20px;}
   .sidenav.open {width: 100%;}
   .desktop-menu {display: none;}
   #DMB1 , #LS1 {display: none;}
+}
+
+@media only screen and (min-width: 980px) {
+  .duo div {width: 50%; float: left; box-sizing: border-box; padding: 5px;}
+}
+
+@media only screen and (max-width: 1440px) {
+  section.mosaic {max-width: calc(100% - 60px);}
 }
 
 /* footer */
@@ -460,7 +496,7 @@ header img {
   transition: 0.3s;
 }
 
-a:hover , .sidenav a:hover, .sub-links a:hover , header img:hover , .burger:hover , button.showSectionButton:hover , input.send:hover , .file-label:hover , button.divtoggler:hover   {
+a:hover , .sidenav a:hover, .sub-links a:hover , header img:hover , .burger:hover , button.showSectionButton:hover , input.send:hover , .file-label:hover , button.divtoggler:hover , .long:hover {
   transition: 0.5s;
   opacity: 0.33;
 }
