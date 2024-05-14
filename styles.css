@@ -60,14 +60,12 @@ section.long {
 div.right {
   display: flex;
   align-items: center;
-  margin-right: calc(100% - 650px);
 }
 
 div.left {
   text-align: right;
   display: flex;
   align-items: center;
-  margin-left: calc(100% - 650px);
 }
 
 /* texts */
@@ -99,6 +97,13 @@ h3 {
   line-height: 33.5px;
 }
 
+h4 {
+  color: inherit;
+  font-size: 76px;
+  font-weight: 200;
+  line-height: 72px;
+}
+
 .note {font-size: 15px;}
 
 /* box */
@@ -114,13 +119,18 @@ a {
 }
 
 a.news-link {
+  font-weight: 300;
   display: block;
   line-height: 32px;
-  padding: 20px 0 0 0;
+  padding: 15px 0 0 0;
   margin: 0 30px;
   border-top: 1px solid grey;
-  text-align: center;
+  display: grid; 
+  grid-template-columns: 25% 50% 25%;
+  grid-gap: 10px;
 }
+
+a.news-link p {margin: 0 0 10px 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
 
 a.news-link:first-of-type {border-top: none;}
 
@@ -205,8 +215,9 @@ main img {
   position: relative; 
 }
 
-.thumb p {text-align: right; margin: 5px 0 0 0; padding: 0;}
-.thumb p.quote {font-size: 14px; margin: 0; color: inherit} 
+.thumb p {text-align: left; margin: 5px 0 0 0; padding: 0;}
+.thumb p.quote {font-size: 14px; margin: 0; color: inherit;} 
+.sub {white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
 
 .cache {
   font-size: 100px;
@@ -367,7 +378,6 @@ ul.cartouche {
   .long {width: calc(60% - 20px);}
   .sidenav.open {width: 50%;}
   .burger , .sidenav {display: none;}
-  div.right , div.left {max-width: 650px;}
 }
 
 @media only screen and (min-width: 500px) {
@@ -382,11 +392,16 @@ ul.cartouche {
   .sidenav.open {width: 100%;}
   .desktop-menu {display: none;}
   #DMB1 , #LS1 {display: none;}
-  div.right , div.left {max-width: 100%; margin: 80px 0;}
+  div.right , div.left {margin: 0 0 50px 0}
 }
 
 @media only screen and (min-width: 880px) {
   .duo div {width: 50%; float: left; box-sizing: border-box; padding: 5px;}
+  header img {height: 45px; margin-top: 0;}
+}
+
+@media only screen and (max-width: 880px) {
+  header img {height: 30px; margin-top: 7px;}
 }
 
 @media only screen and (max-width: 1440px) {
@@ -419,9 +434,8 @@ header {
 }
 
 header img {
-  height: 45px;
   vertical-align: middle; 
-  float: left;  
+  float: left; 
 }
 
 /* menu */
