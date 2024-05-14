@@ -43,7 +43,7 @@ divs[i].style.display = 'none';
 
 // SECTION SHOWER
 
-const sectionsToShowOnLoad = document.querySelectorAll('.mono.news-section.section1');
+const sectionsToShowOnLoad = document.querySelectorAll('.news-section.section1');
 const filterButtons = document.querySelectorAll('.filter-btn');
 const sections = document.querySelectorAll('.news-section');
 const hideAllSectionsExcept = (sectionsToShow) => {
@@ -58,7 +58,7 @@ hideAllSectionsExcept(sectionsToShowOnLoad);
 filterButtons.forEach(button => {
 button.addEventListener('click', () => {
 const filterValue = button.getAttribute('data-filter');
-const sectionsToShow = document.querySelectorAll(`.mono.news-section.${filterValue}`);
+const sectionsToShow = document.querySelectorAll(`.news-section.${filterValue}`);
 hideAllSectionsExcept(sectionsToShow);
 });
 });
