@@ -19,7 +19,7 @@ section {width: 100%; margin: 50px 0;}
 section.accueil , section.accueil-page {margin: 0;}
 
 section.centered {
-  text-align: center;
+  text-align: left;
   max-width: 1200px;
   margin: 120px auto;
 }
@@ -57,13 +57,7 @@ section.long {
   padding-bottom: 40px;
 }
 
-div.right {
-  display: flex;
-  align-items: center;
-}
-
-div.left {
-  text-align: right;
+div.intro {
   display: flex;
   align-items: center;
 }
@@ -102,6 +96,7 @@ h4 {
   font-size: 76px;
   font-weight: 200;
   line-height: 72px;
+  margin: 0 30px 120px 30px;
 }
 
 .note {font-size: 15px;}
@@ -382,7 +377,7 @@ ul.cartouche {
 
 @media only screen and (min-width: 500px) {
   section.menu {grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));}
-  .thumbnail-shower {grid-template-columns: repeat(auto-fit, minmax(425px, 1fr));}
+  .thumbnail-shower {grid-template-columns: repeat(auto-fit, minmax(475px, 1fr));}
 }
 
 @media only screen and (max-width: 1080px) {
@@ -392,7 +387,7 @@ ul.cartouche {
   .sidenav.open {width: 100%;}
   .desktop-menu {display: none;}
   #DMB1 , #LS1 {display: none;}
-  div.right , div.left {margin: 0 0 50px 0}
+  div.intro {margin: 0 0 50px 0}
 }
 
 @media only screen and (min-width: 880px) {
@@ -429,13 +424,17 @@ header {
   left: 0;
   width: calc(100% - 60px);
   z-index: 3;
-  background: rgb(255,255,255);
-  background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.75) 100%);
+  background-color: transparent; 
+  transition: background-color 0.5s ease; /
 }
 
 header img {
   vertical-align: middle; 
   float: left; 
+}
+
+.scrolled {
+    background-color: #333;
 }
 
 /* menu */
@@ -534,28 +533,24 @@ a:hover , .sidenav a:hover, .sub-links a:hover , header img:hover , .burger:hove
   display: none;
 }
 
-.darkModeLabel {
+.darkModeLabel img {
   position: relative;
   display: inline-block;
-  width: 23px;
-  height: 23px;
+  width: 28px;
+  height: 28px;
   cursor: pointer;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url('elements/dm-moon.svg');
+  margin-top: -3px;
   background-color: transparent;
   background-size: cover;
 }
 
 /* DarkMode styles */
 
-.darkModeToggle:checked + .darkModeLabel {background-image: url('elements/dm-sun.svg');}
-
 body.dark-mode {background-color: #1B1B1A; color: #fff;}
-body.dark-mode header {background: rgb(27,27,26);
-background: linear-gradient(0deg, rgba(27,27,26,0) 0%, rgba(27,27,26,0.75) 100%); color: #fff;}
 body.dark-mode .sidenav {background-color: #1B1B1A;}
 body.dark-mode .dropdown-menu {background-color: #1B1B1A;}
 body.dark-mode footer {background-color: #1B1B1A; color: #fff;}
