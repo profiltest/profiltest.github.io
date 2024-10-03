@@ -20,18 +20,21 @@
         <meta property="og:keywords" content=" " />
     </head>
     <body>
-        <header>
-            <a href="index"><img src="library/pictos/dalaheim-castellum.png" alt="Dalaheim Castellum" title="Dalaheim Castellum"></a>
-            
-            <img src="library/pictos/x.png" alt="Dalaheim Castellum X Mycelium" title="Dalaheim Castellum X Mycelium">
+        <nav id="navbar">
+            <a href="vins"><img src="library/pictos/les_vins.png" title="les vins" alt="les vins"></a>
+            <img src="library/pictos/petit-tiret.png">
+            <a href="mycelium"><img src="library/pictos/mycelium.png" title="mycelium" alt="mycelium"></a>
+            <img src="library/pictos/petit-tiret.png">
+            <a href="nous-trouver"><img src="library/pictos/nous_trouver.png" title="nous trouver" alt="nous trouver"></a>
+        </nav>
 
-            <a href="some_link"><img src="library/pictos/mycelium.png" alt="Mycelium" title="Mycelium"></a>
+        <header>
         </header>
 
         <main>
             <section>
                 <div>
-                    <!--<img src="library/pictures/dc-2.jpg">-->
+                    <img src="library/pictures/A/dc-2.png" data-hover="library/pictures/B/dc-2.png" class="hover-img">
                 </div>
                 <div>
                     <h1>Ingénieur agronome, Bart Nyssen possède des vignobles dans le Thier à Liège. Après une étape à Amsterdam des année 70 à 90 et un tour d’Europe, il revient s'installer à Dalhem avec des cépages alors inconnus et les plante dans le vignoble en 1999. Après quelques années de tests, il garde les cépages actuels. Il va alors recommencer à chercher de nouveaux cépages et les installe dans son vignoble en 2010. Ceux-ci sont toujours en phase de tests. Passionné, il donne de son temps pour faire découvrir, aux amateurs de bon vin, un produit bien de chez lui.</h1>
@@ -118,7 +121,7 @@
 
 
             <p>© Dalaheim Castellum, 2024
-            <br>Sobrement web-développé par <a href="https://baptistelevaux.github.io/">Baptiste Levaux</a></p>
+            <br>Web-développé par <a href="https://baptistelevaux.github.io/">Baptiste Levaux</a></p>
         </div>
 
         <footer>
@@ -144,15 +147,38 @@
             image3.style.transform = `translate(${translateX3}px, 0)`;
             });
 
-            // Header scroll function
-            window.onscroll = function() {
-            var header = document.querySelector('header');
-            if (window.scrollY > 50) {  // Scroll
-            header.classList.add('scrolled');
+            // Image hover
+            const hoverImages = document.querySelectorAll('.hover-img');
+            hoverImages.forEach(img => {
+            const originalSrc = img.src;
+            img.addEventListener('mouseover', () => {
+            img.src = img.getAttribute('data-hover');
+            });
+            img.addEventListener('mouseout', () => {
+            img.src = originalSrc;
+            });
+            });
+
+            // Navigation
+            let lastScrollTop = 0;
+            const navbar = document.getElementById('navbar');
+            const navbarItems = navbar.querySelectorAll('a, img');
+
+            window.addEventListener('scroll', function () {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            if (scrollTop > lastScrollTop) {
+            navbar.style.top = '-70px';
+            navbarItems.forEach(item => {
+            item.style.opacity = '0'; 
+            });
             } else {
-            header.classList.remove('scrolled');
+            navbar.style.top = '0';
+            navbarItems.forEach(item => {
+            item.style.opacity = '1'; 
+            });
             }
-            };
+            lastScrollTop = scrollTop;
+            });
         </script>
     </body>
 </html>
