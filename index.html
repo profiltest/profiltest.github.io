@@ -4,8 +4,8 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
         <link rel="stylesheet" href="style.css" />
-        <title>Arthur & Gentiane</title>
-        <link rel="shortcut icon" href="library/pictos/icone.ico">
+        <title>Dalaheim Castellum</title>
+        <link rel="shortcut icon" href="library/elements/icone.ico">
 
         <meta name="description" content=" ">
         <meta name="keywords" content=" ">
@@ -20,21 +20,26 @@
         <meta property="og:keywords" content=" " />
     </head>
     <body>
-        <nav id="navbar">
-            <a href="vins"><img src="library/pictos/les_vins.png" title="les vins" alt="les vins"></a>
-            <img src="library/pictos/petit-tiret.png">
-            <a href="mycelium"><img src="library/pictos/mycelium.png" title="mycelium" alt="mycelium"></a>
-            <img src="library/pictos/petit-tiret.png">
-            <a href="nous-trouver"><img src="library/pictos/nous_trouver.png" title="nous trouver" alt="nous trouver"></a>
-        </nav>
-
         <header>
+            <a href="index"><img src="library/elements/dalaheimcastellum.png" alt="dalaheim-castellum" title="dalaheim-castellum"></a>
         </header>
+
+        <nav>
+            <img id="menuButton1" src="library/elements/menu/B/menu.png" data-hover="library/elements/menu/A/menu.png" class="hover-img" alt="menu" title="menu">
+            <img id="menuButton2" src="library/elements/menu/B/menu_vertical.png" data-hover="library/elements/menu/A/menu_vertical.png" class="hover-img" alt="menu" title="menu">
+
+            <div id="navLinks">
+                <a href="equipe"><img src="library/elements/menu/B/equipe.png" data-hover="library/elements/menu/A/equipe.png" class="hover-img" id="image1" alt="l'équipe" title="l'équipe"></a>
+                <a href="mycelium"><img src="library/elements/menu/B/mycelium.png" data-hover="library/elements/menu/A/mycelium.png" class="hover-img" id="image2" alt="mycélium" title="mycélium"></a>
+                <a href="vins"><img src="library/elements/menu/B/les_vins.png" data-hover="library/elements/menu/A/les_vins.png" class="hover-img" id="image3" alt="les vins" title="les vins"></a>
+                <a href="trouver"><img src="library/elements/menu/B/nous_trouver.png" data-hover="library/elements/menu/A/nous_trouver.png" class="hover-img" id="image4" alt="nous trouver" title="nous trouver"></a>
+            </div>
+        </nav>
 
         <main>
             <section>
-                <div>
-                    <img src="library/pictures/A/dc-2.png" data-hover="library/pictures/B/dc-2.png" class="hover-img">
+                <div class="cadre">
+                    <img src="library/elements/chipchip.png" alt="chipchip" title="chipchip">
                 </div>
                 <div>
                     <h1>Ingénieur agronome, Bart Nyssen possède des vignobles dans le Thier à Liège. Après une étape à Amsterdam des année 70 à 90 et un tour d’Europe, il revient s'installer à Dalhem avec des cépages alors inconnus et les plante dans le vignoble en 1999. Après quelques années de tests, il garde les cépages actuels. Il va alors recommencer à chercher de nouveaux cépages et les installe dans son vignoble en 2010. Ceux-ci sont toujours en phase de tests. Passionné, il donne de son temps pour faire découvrir, aux amateurs de bon vin, un produit bien de chez lui.</h1>
@@ -118,16 +123,14 @@
             <h1><a href="https://www.instagram.com/dalaheimcastellum/" target="_blank" rel="noopener noreferrer">Instagram</a>
             <a href="https://www.facebook.com/profile.php?id=100057304575589" target="_blank" rel="noopener noreferrer">Facebook</a></h1>
 
-
-
             <p>© Dalaheim Castellum, 2024
             <br>Web-développé par <a href="https://baptistelevaux.github.io/">Baptiste Levaux</a></p>
         </div>
 
         <footer>
-            <img src="library/pictos/anim-font.png" alt="Image 1" class="image image1" alt="Arthur & Gentiane" title="Arthur & Gentiane">
-            <img src="library/pictos/anim-gentiane.png" alt="Image 2" class="image image2" alt="Arthur & Gentiane" title="Arthur & Gentiane">
-            <img src="library/pictos/anim-arthur.png" alt="Image 3" class="image image3" alt="Arthur & Gentiane" title="Arthur & Gentiane">
+            <img src="library/elements/anim/font.png" alt="Image 1" class="image image1" alt="Arthur & Gentiane" title="Arthur & Gentiane">
+            <img src="library/elements/anim/gentiane.png" alt="Image 2" class="image image2" alt="Arthur & Gentiane" title="Arthur & Gentiane">
+            <img src="library/elements/anim/arthur.png" alt="Image 3" class="image image3" alt="Arthur & Gentiane" title="Arthur & Gentiane">
         </footer>
 
         <script>
@@ -160,25 +163,26 @@
             });
 
             // Navigation
-            let lastScrollTop = 0;
-            const navbar = document.getElementById('navbar');
-            const navbarItems = navbar.querySelectorAll('a, img');
-
-            window.addEventListener('scroll', function () {
-            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            if (scrollTop > lastScrollTop) {
-            navbar.style.top = '-70px';
-            navbarItems.forEach(item => {
-            item.style.opacity = '0'; 
-            });
-            } else {
-            navbar.style.top = '0';
-            navbarItems.forEach(item => {
-            item.style.opacity = '1'; 
-            });
+            var hideTimeout;
+            function showMenu() {
+            var navLinks = document.getElementById("navLinks");
+            navLinks.style.display = "block";
+            if (hideTimeout) {
+            clearTimeout(hideTimeout);
             }
-            lastScrollTop = scrollTop;
-            });
+            }
+            function hideMenu() {
+            hideTimeout = setTimeout(function() {
+            var navLinks = document.getElementById("navLinks");
+            navLinks.style.display = "none";
+            }, 1500);
+            }
+            document.getElementById("menuButton1").addEventListener("mouseover", showMenu);
+            document.getElementById("menuButton1").addEventListener("mouseout", hideMenu);
+            document.getElementById("menuButton2").addEventListener("mouseover", showMenu);
+            document.getElementById("menuButton2").addEventListener("mouseout", hideMenu);
+            document.getElementById("navLinks").addEventListener("mouseover", showMenu);
+            document.getElementById("navLinks").addEventListener("mouseout", hideMenu);
         </script>
     </body>
 </html>

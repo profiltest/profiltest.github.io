@@ -7,14 +7,13 @@ body {
 	font-family: Helvetica, Arial, sans-serif;
   font-weight: normal;
   font-style: normal;
-  font-size: 14px;
+  font-size: 13px;
   line-height: 1.2;
+  background-color: #fff7ea;
 }
 
 p {margin: 0;}
 a {color: inherit; text-decoration: solid underline; display: inline-block; transition: transform 0.3s ease;}
-
-a:hover {transform: scale(0.9); filter: blur(1px); opacity: 0.8;}
 
 h1 {
 	margin: -7px 0 40px 0;
@@ -23,52 +22,34 @@ h1 {
 	font-size: clamp(22px, 2vw, 32px);
 }
 
-/* NAVIGATION */
-
-#navbar {
-  width: 100%;
-  height: 90px; 
-  background: url(library/pictos/nav.png);
-  background-size: auto 90px;
-  position: fixed;
-  top: 0;
-  right: 0;
-  transition: top 0.3s ease; 
-  z-index: 999;
-  display: flex;
-  justify-content: center; 
-  align-items: center;
-}
-
-nav img {height: 60px; display: block;}
-
-#navbar a {margin: -5px 25px 0 25px;}
-#navbar a:nth-of-type(2) {margin: 4px 25px 0 25px;}
-
-#navbar * {transition: opacity 0.2s ease;}
-
 /* HEADER */
 
-header {
-  margin: 100px 0 0 0;
-  color: white;
-}
+header {width: 50%;}
+header img {height: 130px;}
 
-header img {height: 120px; transition: height 0.3s ease;}
-header.scrolled img {height: 20px;}
+/* NAVIGATION */
 
+nav {width: 50%; position: fixed; z-index: 999;}
+nav img {float: right; cursor: pointer;}
+
+nav div {display: none; position: absolute; top: 160px; right: 120px; transform: translateY(-100%);}
+nav div a {display: block; position: relative; }
+nav div a img {width: auto; height: 55px;}
+
+#image1{transform: rotate(20deg);}
+#image2{transform: translate(-15px, -4px);}
+#image3{transform: rotate(-23deg) translate(-10px, -9px);}
+#image4{transform: rotate(-40deg) translate(30px, 26px);}
+
+#menuButton1 {display: inline; height: 35px;}
+#menuButton2 {display: none; width: 35px;}
 
 /* MAIN */
 
-main {width: 100%; margin: 300px 0 0 0;}
+main {width: 100%; margin: 200px 0 0 0;}
+
 section div {margin-bottom: 50px;}
-
-section p {
-	margin: 15px 0;
-	column-count: 2;
-	column-gap: 10px;
-}
-
+section p {margin: 15px 0; column-count: 2; column-gap: 10px;}
 section img {max-width: 100%;}
 
 /* FOOTER */
@@ -88,7 +69,7 @@ footer {
 .image2 {z-index: 1; transform: translate(45px, -103px);}
 .image3 {z-index: 0; transform: translate(-45px, 0px);}
 
-div.footer {margin-bottom: -300px; margin-top: 250px;}
+div.footer {margin-bottom: -300px; margin-top: 200px;}
 
 /* RESPONSIVE */
 
@@ -100,22 +81,23 @@ div.footer {margin-bottom: -300px; margin-top: 250px;}
   section p {column-count: 1;}
 }
 
-@media only screen and (min-width: 1100px) {
-	body {margin: 60px; width: calc(100% - 120px);}
-	section {display: flex; gap: 5%;}
+@media only screen and (min-width: 900px) {
+  body {margin: 60px; width: calc(100% - 120px);}
+  nav {top: 95px; right: 60px;}
+  section {display: flex; gap: 5%;}
   section div:first-child {flex: 35%;}
   section div:last-child {flex: 60%;}
 }
 
-@media only screen and (max-width: 1300px) {
-  header {grid-template-columns: 1fr; grid-template-rows: auto auto auto; justify-items: center;}
-  header a:first-child , header img:nth-child(2) , header a:last-child {justify-self: center;}
-  header img {
-    height: 15vw; 
-    width: auto;
-    max-height: 120px;
-    min-height: 90px;
-  }
-  header a:last-child img {margin-top: -15px;}
-  main {margin: 120px 0;}
+@media only screen and (max-width: 900px) {
+  section div.cadre {display: none; justify-content: center;}
+  section div img {max-width: 350px; margin: auto;}
+  nav {top: 23px; right: 25px;}
+  #menuButton1 {display: none;}
+  #menuButton2 {display: inline;}
+
+  #image1{transform: rotate(0deg) translate(75px, 140px);}
+  #image2{transform: rotate(-18deg) translate(35px, 162px);}
+  #image3{transform: rotate(-40deg) translate(0px, 160px);}
+  #image4{transform: rotate(-60deg) translate(-30px, 213px);}
 }
