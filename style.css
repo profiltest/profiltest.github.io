@@ -16,7 +16,15 @@ body {
 
 p {margin: 0;}
 
-a {color: inherit; text-decoration: solid underline; display: inline-block; transition: transform 0.3s ease;}
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+  word-break: break-all; 
+  overflow-wrap: anywhere; 
+  white-space: normal; 
+}
+
 h1 span {font-size: 13px; display: inline-block; transform: translateY(-10px);}
 a:hover {transform: scale(0.9);}
 
@@ -39,28 +47,6 @@ nav img {cursor: pointer;}
 
 #menuButton1 {display: inline; height: 35px; z-index: 20; position: relative;}
 #menuButton2 {display: none; width: 35px; z-index: 20; position: relative;}
-
-#navLinks {
-  display: none;
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: 0;
-  background-color: #fff7ea;
-}
-
-#navLinks div {
-  position: absolute;
-  top: 50%;         
-  left: 50%;             
-  transform: translate(-50%, -50%);
-  text-align: center; 
-}
-
-#navLinks a {display: block;}
-#navLinks img {height: 100px;}
 
 /* MAIN */
 
