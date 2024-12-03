@@ -32,13 +32,8 @@ header a:hover img {transform: scale(0.9);}
 
 main {width: 100%; margin: 200px 0 0 0;}
 
-main h1 a {height: 1.3em; margin: 0; transform: translateY(20%);}
-main h1 a img {
-  height: 1.3em; /* Correspond à la hauteur de ligne de h1 */
-    object-fit: contain; /* Garde les proportions de l'image */
-
-margin: 0;
-}
+main h1 a {height: 1em; margin: 0; transform: translateY(5%);}
+main h1 a img {height: 1.15em; object-fit: contain; margin: 0;}
 
 section.endeux div {margin-bottom: 50px;}
 section.endeux p {margin: 15px 0;}
