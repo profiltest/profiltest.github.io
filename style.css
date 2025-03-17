@@ -7,7 +7,7 @@ body {
 	font-family: Helvetica, Arial, sans-serif;
   font-weight: normal;
   font-style: normal;
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.2;
   background-color: #fff7ea;
   background-image: url(library/elements/fond.png);
@@ -32,17 +32,37 @@ header a:hover img {transform: scale(0.9);}
 
 main {width: 100%; margin: 200px 0 0 0;}
 
+main p , main h1 {color: black;}
 main h1 a {height: 1em; margin: 0; transform: translateY(5%);}
 main h1 a img {height: 1.15em; object-fit: contain; margin: 0;}
 
 section.endeux div {margin-bottom: 50px;}
 section.endeux p {margin: 15px 0;}
 section.endeux p.column {column-count: 2; column-gap: 10px;}
-section.endeux img {width: 100%; display: block; margin: 0 auto 15px auto;}
+section.endeux img {width: 100%; display: block; margin: 0 auto 5px auto;}
 
-main.grilled {display: grid; grid-template-columns: repeat(auto-fill, minmax(275px, 1fr)); gap: 35px;}
-main.grilled section img {width: 100%; float: left;}
-main.grilled section p {margin-top: 10px; float: right;}
+.hover-img {
+  max-width: 500px;
+  float: right;
+}
+
+.hover-container {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  color: #007bff;
+}
+
+.hover-image {
+  position: absolute;
+  display: none;
+  pointer-events: none; 
+  width: 275px; 
+  border: 1px solid #ddd;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
 
 /* FOOTER */
 
@@ -78,7 +98,6 @@ div.footer img {width: 170px; float: left; padding: 0 35px 20px 0;}
 
 @media only screen and (max-width: 900px) {
   body {margin: 20px; width: calc(100% - 40px);}
-  section.endeux div.cadre {display: flex; justify-content: center;}
   img.illu {max-width: 350px; margin: auto;}
   footer {display: none;}
   img.mobile {display: block; width: 100%; max-width: 370px; margin: 0 auto 100px auto;}
